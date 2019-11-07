@@ -1,0 +1,6 @@
+framework module RestingKit {
+  umbrella header "RestingKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
