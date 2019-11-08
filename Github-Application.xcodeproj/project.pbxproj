@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		B369CE0E2374AD6C00769209 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B369CE0C2374AD6C00769209 /* LaunchScreen.storyboard */; };
 		B369CE192374AD6C00769209 /* Github_ApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B369CE182374AD6C00769209 /* Github_ApplicationTests.swift */; };
 		B369CE242374AD6C00769209 /* Github_ApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B369CE232374AD6C00769209 /* Github_ApplicationUITests.swift */; };
+		B369CE362374BF7C00769209 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B369CE352374BF7C00769209 /* Config.swift */; };
 		C2390F715F2E5F853555D47D /* Pods_Github_Application_Github_ApplicationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0B12AE49BF9DFC2BF662B86 /* Pods_Github_Application_Github_ApplicationUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		B369CE1F2374AD6C00769209 /* Github-ApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Github-ApplicationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B369CE232374AD6C00769209 /* Github_ApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github_ApplicationUITests.swift; sourceTree = "<group>"; };
 		B369CE252374AD6C00769209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B369CE352374BF7C00769209 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		E0B12AE49BF9DFC2BF662B86 /* Pods_Github_Application_Github_ApplicationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Github_Application_Github_ApplicationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB8459FB8EDF0638BAB7ABDF /* Pods-Github-Application-Github-ApplicationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github-Application-Github-ApplicationUITests.release.xcconfig"; path = "Target Support Files/Pods-Github-Application-Github-ApplicationUITests/Pods-Github-Application-Github-ApplicationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F563EB74B4AC1B767B5D4E17 /* Pods-Github-Application.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github-Application.debug.xcconfig"; path = "Target Support Files/Pods-Github-Application/Pods-Github-Application.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,7 +103,6 @@
 				0EB9C0E0B7C9E869A8CBD16F /* Pods-Github-ApplicationTests.debug.xcconfig */,
 				31AA59F728F24412BDE684D1 /* Pods-Github-ApplicationTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -130,6 +131,10 @@
 		B369CE002374AD6B00769209 /* Github-Application */ = {
 			isa = PBXGroup;
 			children = (
+				B369CE342374BAB800769209 /* Extensions */,
+				B369CE332374BA3400769209 /* Models */,
+				B369CE322374BA2C00769209 /* View */,
+				B369CE312374B9F500769209 /* ViewControllers */,
 				B369CE012374AD6B00769209 /* AppDelegate.swift */,
 				B369CE032374AD6B00769209 /* SceneDelegate.swift */,
 				B369CE052374AD6B00769209 /* ViewController.swift */,
@@ -157,6 +162,35 @@
 				B369CE252374AD6C00769209 /* Info.plist */,
 			);
 			path = "Github-ApplicationUITests";
+			sourceTree = "<group>";
+		};
+		B369CE312374B9F500769209 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B369CE322374BA2C00769209 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B369CE332374BA3400769209 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B369CE342374BAB800769209 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B369CE352374BF7C00769209 /* Config.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B962F6E5D9C8C9ABE122A8F8 /* Frameworks */ = {
@@ -409,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B369CE062374AD6B00769209 /* ViewController.swift in Sources */,
+				B369CE362374BF7C00769209 /* Config.swift in Sources */,
 				B369CE022374AD6B00769209 /* AppDelegate.swift in Sources */,
 				B369CE042374AD6B00769209 /* SceneDelegate.swift in Sources */,
 			);
