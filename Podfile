@@ -9,6 +9,7 @@ target 'Github-Application' do
 
   # DI
   pod 'SwinjectStoryboard'
+  pod 'SwinjectAutoregistration'
   # Network
   pod 'RestingKit'
   # Tools
