@@ -1,0 +1,7 @@
+strings:
+  inputs: Github-Application/en.lproj/Localizable.strings
+  outputs:
+    templateName: structured-swift4
+    output: Github-Application/Resources/Strings.generated.swift
+    params:
+      enumName: I18n

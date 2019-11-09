@@ -8,8 +8,9 @@ target 'Github-Application' do
   # Pods for Github-Application
 
   # DI
-  pod 'SwinjectStoryboard'
+  pod 'Swinject', '~> 2.6.2'
   pod 'SwinjectAutoregistration'
+  pod 'SwinjectStoryboard'
   # Network
   pod 'RestingKit'
   # Tools

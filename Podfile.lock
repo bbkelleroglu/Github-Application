@@ -1,14 +1,14 @@
 PODS:
   - Alamofire (4.9.1)
   - GRMustache.swift (4.0.1)
-  - PromiseKit (6.11.0):
-    - PromiseKit/CorePromise (= 6.11.0)
-    - PromiseKit/Foundation (= 6.11.0)
-    - PromiseKit/UIKit (= 6.11.0)
-  - PromiseKit/CorePromise (6.11.0)
-  - PromiseKit/Foundation (6.11.0):
+  - PromiseKit (6.12.0):
+    - PromiseKit/CorePromise (= 6.12.0)
+    - PromiseKit/Foundation (= 6.12.0)
+    - PromiseKit/UIKit (= 6.12.0)
+  - PromiseKit/CorePromise (6.12.0)
+  - PromiseKit/Foundation (6.12.0):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (6.11.0):
+  - PromiseKit/UIKit (6.12.0):
     - PromiseKit/CorePromise
   - R.swift (5.1.0):
     - R.swift.Library (~> 5.1.0)
@@ -22,7 +22,7 @@ PODS:
     - R.swift.Library
     - SegueManager/iOS
   - SwiftLint (0.36.0)
-  - Swinject (2.7.1)
+  - Swinject (2.6.2)
   - SwinjectAutoregistration (2.6.1):
     - Swinject (~> 2.6)
   - SwinjectStoryboard (2.2.0):
@@ -33,6 +33,7 @@ DEPENDENCIES:
   - RestingKit
   - SegueManager/R.swift
   - SwiftLint
+  - Swinject (~> 2.6.2)
   - SwinjectAutoregistration
   - SwinjectStoryboard
 
@@ -53,16 +54,16 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   GRMustache.swift: a6436504284b22b4b05daf5f46f77bd3fe00a9a2
-  PromiseKit: e4863d06976e7dee5e41c04fc7371c16b3600292
+  PromiseKit: c06835ba442ce5454ce3cdde470232804a6e4ff8
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
   RestingKit: 61d3732eff8d49a2ab3cfefdc972d3d57ba69ad0
   SegueManager: 4f0c9e8237fe4b925129f17964caf81d1d6341bf
   SwiftLint: fc9859e4e1752340664851f667bb1898b9c90114
-  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+  Swinject: cf7458774b1b00323080a9c67e47a1ee7f9d2af1
   SwinjectAutoregistration: d0de7e48db3601b8b130f2f84e5a8399e0224135
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: aa3d5bd70b4581a14cf8758fe2dbc9bf8f69e6c2
+PODFILE CHECKSUM: d1af4cb5172d98bf02fbd3a5ea91d9bb0f0465a5
 
 COCOAPODS: 1.8.4
