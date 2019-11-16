@@ -6,10 +6,14 @@ class RepoSearchViewController: SegueManagerViewController {
 
     var searchService: SearchService!
     private var repos = [RepositoryModel]()
+    var nextPageUrl: String? = ""
+    let numberOfPagination = 10
+    var moreItems: Bool { nextPageUrl != nil }
+    var numberOfItems: Int { repos.count }
 
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
-        searchController.obscuresBackgroundDuringPresentation = true
+        searchController.obscuresBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchResultsUpdater = self
         return searchController
@@ -31,6 +35,17 @@ class RepoSearchViewController: SegueManagerViewController {
         searchBar.tintColor = .white
         self.navigationItem.searchController = searchController
     }
+
+    private func load(text: String) {
+        searchService.searchRepo(text: text).done {
+            self.repos += $0
+            let range = (self.repos.count - $0.count)..<self.repos.count
+            let indexPaths = range.map { IndexPath(item: $0, section: 0) }
+            self.tableView.insertRows(at: indexPaths, with: .automatic)
+        }.catch { error in
+            print(error.localizedDescription)
+        }
+    }
 }
 extension RepoSearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,15 +62,15 @@ extension RepoSearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50.0
     }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == numberOfItems - 1 && self.moreItems {
+            load(text: searchBar.text ?? "")
+        }
+    }
 }
 extension RepoSearchViewController: UISearchResultsUpdating, UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text else { return }
-        searchService.searchRepo(text: text).done {
-            self.repos = $0
-            self.tableView.reloadData()
-        }.catch { error in
-            print(error.localizedDescription)
-        }
+        load(text: text)
     }
 }
