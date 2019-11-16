@@ -19,7 +19,7 @@ class RepositoryTableViewCell: UITableViewCell {
         languageName.text = repository.language
         starCount.text = String(repository.stargazersCount)
 
-        if let avatarImage = repository.avatarUrl {
+        if let avatarImage = repository.owner.avatarUrl {
             repoAvatarImage.image = nil
             repoAvatarImage.af_setImage(withURL: avatarImage)
         } else {
