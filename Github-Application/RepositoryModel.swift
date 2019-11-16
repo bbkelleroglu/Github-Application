@@ -1,6 +1,6 @@
 import Foundation
 
-struct RepositoryModel: Encodable {
+struct RepositoryModel: Codable {
     let name: String
     let fullName: String
     let description: String

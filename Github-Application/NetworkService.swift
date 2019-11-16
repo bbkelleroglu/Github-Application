@@ -18,5 +18,4 @@ class NetworkService {
     func httpCall() -> RestingClient {
         return httpClient
     }
-
 }
