@@ -46,6 +46,7 @@ Temporary Items
 ## Build generated
 build/
 DerivedData/
+R.generated.swift
 
 ## Various settings
 *.pbxuser
