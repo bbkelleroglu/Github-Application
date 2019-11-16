@@ -1,13 +1,10 @@
 import Foundation
 
 struct RepositoryModel: Codable {
-    let name: String
+    let id: Int
     let fullName: String
     let description: String
-    let ownerName: String
+    let avatarUrl: URL
     let stargazersCount: Int
-    let watchersCount: Int
-    let forksCount: Int
-    let defaultBranch: String
-    let openIssuesCount: Int
+    let language: String
 }

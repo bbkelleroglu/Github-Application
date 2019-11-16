@@ -18,7 +18,12 @@ class GithubSearchService: SearchService {
 }
 
 class MockGithubSearchService: SearchService {
+    private let fixtures: Fixtures
+
+    init(fixtures: Fixtures) {
+        self.fixtures = fixtures
+    }
     func searchRepo(text: String) -> Promise<[RepositoryModel]> {
-        //TODO: Add mock services.
+        return Promise.value(fixtures.repository)
     }
 }

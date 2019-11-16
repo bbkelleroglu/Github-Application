@@ -11,6 +11,9 @@
 		B23E65A21EE34AED4C42C870 /* Pods_Github_ApplicationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FCA7136266AAFDA5AA9586 /* Pods_Github_ApplicationTests.framework */; };
 		B3220FC5237F16D80050C274 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3220FC4237F16D80050C274 /* NetworkService.swift */; };
 		B3220FC7237FFBBA0050C274 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3220FC6237FFBBA0050C274 /* Promise.swift */; };
+		B3220FCA23800E250050C274 /* repository.yml in Resources */ = {isa = PBXBuildFile; fileRef = B3220FC923800E250050C274 /* repository.yml */; };
+		B3220FCC23800E510050C274 /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3220FCB23800E510050C274 /* Fixtures.swift */; };
+		B3220FCF238010200050C274 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3220FCE238010200050C274 /* R.generated.swift */; };
 		B337D6F3237DC62B00941E55 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337D6F2237DC62B00941E55 /* RepositoryModel.swift */; };
 		B337D6F5237DC67300941E55 /* TextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337D6F4237DC67300941E55 /* TextModel.swift */; };
 		B337D6F8237DDAE200941E55 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337D6F7237DDAE200941E55 /* Endpoints.swift */; };
@@ -57,6 +60,9 @@
 		B03F883C5F60946791D29DE7 /* Pods-Github-Application-Github-ApplicationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github-Application-Github-ApplicationUITests.debug.xcconfig"; path = "Target Support Files/Pods-Github-Application-Github-ApplicationUITests/Pods-Github-Application-Github-ApplicationUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B3220FC4237F16D80050C274 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		B3220FC6237FFBBA0050C274 /* Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
+		B3220FC923800E250050C274 /* repository.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = repository.yml; sourceTree = "<group>"; };
+		B3220FCB23800E510050C274 /* Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixtures.swift; sourceTree = "<group>"; };
+		B3220FCE238010200050C274 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		B337D6F2237DC62B00941E55 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RepositoryModel.swift; path = "Github-Application/RepositoryModel.swift"; sourceTree = SOURCE_ROOT; };
 		B337D6F4237DC67300941E55 /* TextModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextModel.swift; path = "Github-Application/TextModel.swift"; sourceTree = SOURCE_ROOT; };
 		B337D6F7237DDAE200941E55 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
@@ -128,6 +134,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B3220FC823800AB70050C274 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B3220FC923800E250050C274 /* repository.yml */,
+				B3220FCE238010200050C274 /* R.generated.swift */,
+				B3220FCB23800E510050C274 /* Fixtures.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		B337D6F6237DDAD200941E55 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +177,7 @@
 		B369CE002374AD6B00769209 /* Github-Application */ = {
 			isa = PBXGroup;
 			children = (
+				B3220FC823800AB70050C274 /* Resources */,
 				B337D6F6237DDAD200941E55 /* Utils */,
 				B369CE3B2377332C00769209 /* Services */,
 				B369CE342374BAB800769209 /* Extensions */,
@@ -257,6 +274,7 @@
 			buildConfigurationList = B369CE282374AD6C00769209 /* Build configuration list for PBXNativeTarget "Github-Application" */;
 			buildPhases = (
 				FAA727B93AF442C544E7A527 /* [CP] Check Pods Manifest.lock */,
+				B3220FCD23800F400050C274 /* R.swift */,
 				B369CDFA2374AD6B00769209 /* Sources */,
 				B369CDFB2374AD6B00769209 /* Frameworks */,
 				B369CDFC2374AD6B00769209 /* Resources */,
@@ -361,6 +379,7 @@
 			files = (
 				B369CE0E2374AD6C00769209 /* LaunchScreen.storyboard in Resources */,
 				B369CE0B2374AD6C00769209 /* Assets.xcassets in Resources */,
+				B3220FCA23800E250050C274 /* repository.yml in Resources */,
 				B369CE092374AD6B00769209 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +457,26 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Github-Application-Github-ApplicationUITests/Pods-Github-Application-Github-ApplicationUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B3220FCD23800F400050C274 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		B369CE382375FEAB00769209 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -507,6 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3220FC5237F16D80050C274 /* NetworkService.swift in Sources */,
+				B3220FCF238010200050C274 /* R.generated.swift in Sources */,
 				B369CE3F2377334500769209 /* UserService.swift in Sources */,
 				B337D6F3237DC62B00941E55 /* RepositoryModel.swift in Sources */,
 				B369CE062374AD6B00769209 /* ViewController.swift in Sources */,
@@ -516,6 +556,7 @@
 				B369CE022374AD6B00769209 /* AppDelegate.swift in Sources */,
 				B369CE3D2377333B00769209 /* SearchService.swift in Sources */,
 				B369CE3A2376049500769209 /* SwinjectStoryboard.swift in Sources */,
+				B3220FCC23800E510050C274 /* Fixtures.swift in Sources */,
 				B369CE042374AD6B00769209 /* SceneDelegate.swift in Sources */,
 				B3220FC7237FFBBA0050C274 /* Promise.swift in Sources */,
 			);
