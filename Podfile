@@ -12,6 +12,7 @@ target 'Github-Application' do
   pod 'SwinjectAutoregistration'
   pod 'SwinjectStoryboard'
   # Network
+  pod 'AlamofireImage', '~> 3.5'
   pod 'RestingKit'
   # Tools
   pod 'SwiftLint'

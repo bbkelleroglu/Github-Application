@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.9.1)
+  - AlamofireImage (3.6.0):
+    - Alamofire (~> 4.9)
   - GRMustache.swift (4.0.1)
   - PromiseKit (6.12.0):
     - PromiseKit/CorePromise (= 6.12.0)
@@ -30,6 +32,7 @@ PODS:
   - Yams (2.0.0)
 
 DEPENDENCIES:
+  - AlamofireImage (~> 3.5)
   - R.swift
   - RestingKit
   - SegueManager/R.swift
@@ -42,6 +45,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AlamofireImage
     - GRMustache.swift
     - PromiseKit
     - R.swift
@@ -56,6 +60,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireImage: be9963c6582d68b39e89191f64c82a7d7bf40fdd
   GRMustache.swift: a6436504284b22b4b05daf5f46f77bd3fe00a9a2
   PromiseKit: c06835ba442ce5454ce3cdde470232804a6e4ff8
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
@@ -68,6 +73,6 @@ SPEC CHECKSUMS:
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
   Yams: cb96472112d99e4b368f8dae9ab62e8a3eb8a3f9
 
-PODFILE CHECKSUM: 50dbe41af615eb494ce697493f44416d6918403b
+PODFILE CHECKSUM: 42289c599a1f58248a631007490d8d80b0c4e9c1
 
 COCOAPODS: 1.8.4
