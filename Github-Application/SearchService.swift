@@ -1,6 +1,6 @@
 import Foundation
-import RestingKit
 import PromiseKit
+import RestingKit
 protocol SearchService {
     func searchRepo(text: String) -> Promise<[RepositoryModel]>
 }

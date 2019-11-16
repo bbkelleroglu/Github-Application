@@ -15,4 +15,3 @@ class Fixtures {
         repository = loadFixture(url: R.file.repositoryYml()!, decoder: yamlDecoder)
     }
 }
-

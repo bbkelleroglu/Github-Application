@@ -23,5 +23,9 @@ extension SwinjectStoryboard {
         container.autoregister(UserService.self, initializer: MockGithubUserService.init).inObjectScope(.container)
         container.autoregister(SearchService.self, initializer: MockGithubSearchService.init).inObjectScope(.container)
     }
+    static func registerControllers(container: Container) {
+        container.storyboardInitCompleted(RepoSearchViewController.self) { r, c in
+            c.searchService = r~>
+        }
+    }
 }
-
