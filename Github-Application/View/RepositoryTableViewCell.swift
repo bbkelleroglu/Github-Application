@@ -1,3 +1,4 @@
+import AlamofireImage
 import UIKit
 class RepositoryTableViewCell: UITableViewCell {
     @IBOutlet weak var repoAvatarImage: UIImageView!
@@ -5,7 +6,6 @@ class RepositoryTableViewCell: UITableViewCell {
     @IBOutlet weak var repoDescription: UILabel!
     @IBOutlet weak var starIcon: UIImageView!
     @IBOutlet weak var starCount: UILabel!
-    @IBOutlet weak var languageIcon: UIImageView!
     @IBOutlet weak var languageName: UILabel!
 
     func configure(for repository: RepositoryModel) {
@@ -17,7 +17,14 @@ class RepositoryTableViewCell: UITableViewCell {
         repoName.text = repository.fullName
         repoDescription.text = repository.description
         languageName.text = repository.language
-        
+        starCount.text = String(repository.stargazersCount)
 
+        if let avatarImage = repository.avatarUrl {
+            repoAvatarImage.image = nil
+            repoAvatarImage.af_setImage(withURL: avatarImage)
+        } else {
+            repoAvatarImage.af_cancelImageRequest()
+            repoAvatarImage.image = .checkmark
+        }
     }
 }

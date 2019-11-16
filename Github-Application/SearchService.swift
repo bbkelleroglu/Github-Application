@@ -12,8 +12,10 @@ class GithubSearchService: SearchService {
         self.networkService = networkService
     }
     func searchRepo(text: String) -> Promise<[RepositoryModel]> {
-        let request = RestingRequest(endpoint: Endpoints.Repository.search, body: TextModel(text: text))
-        return networkService.httpCall().perform(request).extractingBody()
+        let request = RestingRequest(endpoint: Endpoints.Repository.search, body: TextModel(q: text))
+        return networkService.httpCall().perform(request).map {
+            $0.body.items
+        }
     }
 }
 

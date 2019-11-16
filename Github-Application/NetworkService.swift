@@ -12,7 +12,8 @@ class NetworkService {
                                             queryParameterEncoder: config.queryParameterEncoder)
         httpClient = RestingClient(baseUrl: config.baseUrl,
                                    decoder: config.jsonDecoder,
-                                   requestConverter: converter)
+                                   requestConverter: converter,
+                                   interceptors: [RequestResponseLoggingInterceptor()])
     }
 
     func httpCall() -> RestingClient {

@@ -1,5 +1,6 @@
 import Foundation
 
 struct TextModel: Encodable {
-    let text: String
+    // swiftlint:disable:next identifier_name
+    let q: String
 }

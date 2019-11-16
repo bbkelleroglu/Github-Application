@@ -10,6 +10,7 @@ extension SwinjectStoryboard {
     class func setup() {
         let container = defaultContainer
         container.autoregister(Config.self, initializer: Config.init)
+        registerControllers(container: container)
         #if MOCK
         container.autoregister(SearchService.self, initializer: MockGithubSearchService.init)
         #else
@@ -17,6 +18,7 @@ extension SwinjectStoryboard {
         #endif
     }
     static func registerNetworkServices(into container: Container) {
+        container.autoregister(NetworkService.self, initializer: NetworkService.init)
         container.autoregister(SearchService.self, initializer: GithubSearchService.init).inObjectScope(.container)
         container.autoregister(UserService.self, initializer: GithubUserService.init).inObjectScope(.container)
     }
