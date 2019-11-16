@@ -17,6 +17,7 @@ target 'Github-Application' do
   pod 'SwiftLint'
   pod 'R.swift'
   pod 'SegueManager/R.swift'
+  pod 'Yams'
   # User Interface
 
 

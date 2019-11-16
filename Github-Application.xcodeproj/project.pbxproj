@@ -47,9 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B990439DE9CA5F96D7CA15F /* Pods-Github-ApplicationTests.mock.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github-ApplicationTests.mock.xcconfig"; path = "Target Support Files/Pods-Github-ApplicationTests/Pods-Github-ApplicationTests.mock.xcconfig"; sourceTree = "<group>"; };
 		0EB9C0E0B7C9E869A8CBD16F /* Pods-Github-ApplicationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github-ApplicationTests.debug.xcconfig"; path = "Target Support Files/Pods-Github-ApplicationTests/Pods-Github-ApplicationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		31AA59F728F24412BDE684D1 /* Pods-Github-ApplicationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github-ApplicationTests.release.xcconfig"; path = "Target Support Files/Pods-Github-ApplicationTests/Pods-Github-ApplicationTests.release.xcconfig"; sourceTree = "<group>"; };
 		5B92118553474FAA8395EFF8 /* Pods-Github-Application.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github-Application.release.xcconfig"; path = "Target Support Files/Pods-Github-Application/Pods-Github-Application.release.xcconfig"; sourceTree = "<group>"; };
+		779EE3E927D2156CF68EC77D /* Pods-Github-Application-Github-ApplicationUITests.mock.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github-Application-Github-ApplicationUITests.mock.xcconfig"; path = "Target Support Files/Pods-Github-Application-Github-ApplicationUITests/Pods-Github-Application-Github-ApplicationUITests.mock.xcconfig"; sourceTree = "<group>"; };
 		7A3B20E7D1A5725A406D9254 /* Pods_Github_Application.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Github_Application.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96FCA7136266AAFDA5AA9586 /* Pods_Github_ApplicationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Github_ApplicationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03F883C5F60946791D29DE7 /* Pods-Github-Application-Github-ApplicationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github-Application-Github-ApplicationUITests.debug.xcconfig"; path = "Target Support Files/Pods-Github-Application-Github-ApplicationUITests/Pods-Github-Application-Github-ApplicationUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		B369CE392376049500769209 /* SwinjectStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectStoryboard.swift; sourceTree = "<group>"; };
 		B369CE3C2377333B00769209 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		B369CE3E2377334500769209 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		CAA8A2285BA06324C77575F7 /* Pods-Github-Application.mock.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github-Application.mock.xcconfig"; path = "Target Support Files/Pods-Github-Application/Pods-Github-Application.mock.xcconfig"; sourceTree = "<group>"; };
 		E0B12AE49BF9DFC2BF662B86 /* Pods_Github_Application_Github_ApplicationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Github_Application_Github_ApplicationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB8459FB8EDF0638BAB7ABDF /* Pods-Github-Application-Github-ApplicationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github-Application-Github-ApplicationUITests.release.xcconfig"; path = "Target Support Files/Pods-Github-Application-Github-ApplicationUITests/Pods-Github-Application-Github-ApplicationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F563EB74B4AC1B767B5D4E17 /* Pods-Github-Application.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github-Application.debug.xcconfig"; path = "Target Support Files/Pods-Github-Application/Pods-Github-Application.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +121,9 @@
 				EB8459FB8EDF0638BAB7ABDF /* Pods-Github-Application-Github-ApplicationUITests.release.xcconfig */,
 				0EB9C0E0B7C9E869A8CBD16F /* Pods-Github-ApplicationTests.debug.xcconfig */,
 				31AA59F728F24412BDE684D1 /* Pods-Github-ApplicationTests.release.xcconfig */,
+				CAA8A2285BA06324C77575F7 /* Pods-Github-Application.mock.xcconfig */,
+				779EE3E927D2156CF68EC77D /* Pods-Github-Application-Github-ApplicationUITests.mock.xcconfig */,
+				0B990439DE9CA5F96D7CA15F /* Pods-Github-ApplicationTests.mock.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -868,7 +874,7 @@
 		};
 		B369CE412377344D00769209 /* Mock */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F563EB74B4AC1B767B5D4E17 /* Pods-Github-Application.debug.xcconfig */;
+			baseConfigurationReference = CAA8A2285BA06324C77575F7 /* Pods-Github-Application.mock.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -888,7 +894,7 @@
 		};
 		B369CE422377344D00769209 /* Mock */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EB9C0E0B7C9E869A8CBD16F /* Pods-Github-ApplicationTests.debug.xcconfig */;
+			baseConfigurationReference = 0B990439DE9CA5F96D7CA15F /* Pods-Github-ApplicationTests.mock.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -911,7 +917,7 @@
 		};
 		B369CE432377344D00769209 /* Mock */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B03F883C5F60946791D29DE7 /* Pods-Github-Application-Github-ApplicationUITests.debug.xcconfig */;
+			baseConfigurationReference = 779EE3E927D2156CF68EC77D /* Pods-Github-Application-Github-ApplicationUITests.mock.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

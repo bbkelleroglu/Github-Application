@@ -27,6 +27,7 @@ PODS:
     - Swinject (~> 2.6)
   - SwinjectStoryboard (2.2.0):
     - Swinject (~> 2.6)
+  - Yams (2.0.0)
 
 DEPENDENCIES:
   - R.swift
@@ -36,6 +37,7 @@ DEPENDENCIES:
   - Swinject (~> 2.6.2)
   - SwinjectAutoregistration
   - SwinjectStoryboard
+  - Yams
 
 SPEC REPOS:
   trunk:
@@ -50,6 +52,7 @@ SPEC REPOS:
     - Swinject
     - SwinjectAutoregistration
     - SwinjectStoryboard
+    - Yams
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -63,7 +66,8 @@ SPEC CHECKSUMS:
   Swinject: cf7458774b1b00323080a9c67e47a1ee7f9d2af1
   SwinjectAutoregistration: d0de7e48db3601b8b130f2f84e5a8399e0224135
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
+  Yams: cb96472112d99e4b368f8dae9ab62e8a3eb8a3f9
 
-PODFILE CHECKSUM: d1af4cb5172d98bf02fbd3a5ea91d9bb0f0465a5
+PODFILE CHECKSUM: 50dbe41af615eb494ce697493f44416d6918403b
 
 COCOAPODS: 1.8.4
