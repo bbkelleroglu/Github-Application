@@ -18,6 +18,8 @@
 		B3220FD4238167AB0050C274 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3220FD3238167AB0050C274 /* Component.swift */; };
 		B3220FD72381687B0050C274 /* DetailHeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3220FD62381687B0050C274 /* DetailHeaderComponent.swift */; };
 		B3220FD9238168910050C274 /* DetailHeaderComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3220FD8238168910050C274 /* DetailHeaderComponent.xib */; };
+		B3220FDC238178920050C274 /* HeaderCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3220FDB238178920050C274 /* HeaderCardComponent.swift */; };
+		B3220FDE238178AD0050C274 /* HeaderCardComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3220FDD238178AD0050C274 /* HeaderCardComponent.xib */; };
 		B337D6F3237DC62B00941E55 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337D6F2237DC62B00941E55 /* RepositoryModel.swift */; };
 		B337D6F5237DC67300941E55 /* TextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337D6F4237DC67300941E55 /* TextModel.swift */; };
 		B337D6F8237DDAE200941E55 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337D6F7237DDAE200941E55 /* Endpoints.swift */; };
@@ -71,6 +73,8 @@
 		B3220FD3238167AB0050C274 /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		B3220FD62381687B0050C274 /* DetailHeaderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderComponent.swift; sourceTree = "<group>"; };
 		B3220FD8238168910050C274 /* DetailHeaderComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailHeaderComponent.xib; sourceTree = "<group>"; };
+		B3220FDB238178920050C274 /* HeaderCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCardComponent.swift; sourceTree = "<group>"; };
+		B3220FDD238178AD0050C274 /* HeaderCardComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCardComponent.xib; sourceTree = "<group>"; };
 		B337D6F2237DC62B00941E55 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RepositoryModel.swift; path = "Github-Application/RepositoryModel.swift"; sourceTree = SOURCE_ROOT; };
 		B337D6F4237DC67300941E55 /* TextModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextModel.swift; path = "Github-Application/TextModel.swift"; sourceTree = SOURCE_ROOT; };
 		B337D6F7237DDAE200941E55 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
@@ -155,6 +159,7 @@
 		B3220FD22381679C0050C274 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				B3220FDA23816BD80050C274 /* HeaderCardComponents */,
 				B3220FD52381683D0050C274 /* DetailHeaderComponents */,
 				B3220FD3238167AB0050C274 /* Component.swift */,
 			);
@@ -168,6 +173,15 @@
 				B3220FD8238168910050C274 /* DetailHeaderComponent.xib */,
 			);
 			path = DetailHeaderComponents;
+			sourceTree = "<group>";
+		};
+		B3220FDA23816BD80050C274 /* HeaderCardComponents */ = {
+			isa = PBXGroup;
+			children = (
+				B3220FDB238178920050C274 /* HeaderCardComponent.swift */,
+				B3220FDD238178AD0050C274 /* HeaderCardComponent.xib */,
+			);
+			path = HeaderCardComponents;
 			sourceTree = "<group>";
 		};
 		B337D6F6237DDAD200941E55 /* Utils */ = {
@@ -405,6 +419,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3220FDE238178AD0050C274 /* HeaderCardComponent.xib in Resources */,
 				B369CE0E2374AD6C00769209 /* LaunchScreen.storyboard in Resources */,
 				B369CE0B2374AD6C00769209 /* Assets.xcassets in Resources */,
 				B3220FCA23800E250050C274 /* repository.yml in Resources */,
@@ -574,6 +589,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3220FDC238178920050C274 /* HeaderCardComponent.swift in Sources */,
 				B3220FC5237F16D80050C274 /* NetworkService.swift in Sources */,
 				B3220FCF238010200050C274 /* R.generated.swift in Sources */,
 				B369CE3F2377334500769209 /* UserService.swift in Sources */,

@@ -128,6 +128,40 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
+  struct nib {
+    /// Nib `DetailHeaderComponent`.
+    static let detailHeaderComponent = _R.nib._DetailHeaderComponent()
+    /// Nib `HeaderCardComponent`.
+    static let headerCardComponent = _R.nib._HeaderCardComponent()
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "DetailHeaderComponent", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.detailHeaderComponent) instead")
+    static func detailHeaderComponent(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.detailHeaderComponent)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "HeaderCardComponent", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.headerCardComponent) instead")
+    static func headerCardComponent(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.headerCardComponent)
+    }
+    #endif
+
+    static func detailHeaderComponent(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> DetailHeaderComponentView? {
+      return R.nib.detailHeaderComponent.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? DetailHeaderComponentView
+    }
+
+    static func headerCardComponent(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HeaderCardComponentView? {
+      return R.nib.headerCardComponent.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HeaderCardComponentView
+    }
+
+    fileprivate init() {}
+  }
+
   /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `repositoryCell`.
@@ -155,6 +189,34 @@ struct _R: Rswift.Validatable {
     try storyboard.validate()
     #endif
   }
+
+  #if os(iOS) || os(tvOS)
+  struct nib {
+    struct _DetailHeaderComponent: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "DetailHeaderComponent"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> DetailHeaderComponentView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? DetailHeaderComponentView
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _HeaderCardComponent: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "HeaderCardComponent"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HeaderCardComponentView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HeaderCardComponentView
+      }
+
+      fileprivate init() {}
+    }
+
+    fileprivate init() {}
+  }
+  #endif
 
   #if os(iOS) || os(tvOS)
   struct storyboard: Rswift.Validatable {
