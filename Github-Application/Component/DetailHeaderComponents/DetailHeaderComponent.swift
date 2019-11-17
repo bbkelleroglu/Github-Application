@@ -20,6 +20,7 @@ class DetailHeaderComponent: Component {
         get { return view.avatarImage.image }
         set { view.avatarImage.image = newValue }
     }
+
     func configureUserDetail(for user: UserModelResponse) {
         if let image = user.avatarUrl {
             view.avatarImage.af_setImage(withURL: image)
@@ -28,7 +29,6 @@ class DetailHeaderComponent: Component {
             view.avatarImage.image = .checkmark
         }
         view.descriptionLabel.text = user.bio
-
         view.firstHeaderCardView.countText = String(user.followers)
         view.firstHeaderCardView.nameText = "Followers"
         view.secondHeaderCardView.countText = String(user.following)
