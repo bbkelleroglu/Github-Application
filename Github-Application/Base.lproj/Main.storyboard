@@ -148,5 +148,46 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>
+        <!--User Detail View Controller-->
+        <scene sceneID="UO2-V7-DwI">
+            <objects>
+                <viewController id="b42-DN-mlK" customClass="UserDetailViewController" customModule="Github_Application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iDB-Px-fKH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4lA-Ag-Ual" customClass="DetailHeaderComponent" customModule="Github_Application" customModuleProvider="target">
+                                <rect key="frame" x="9" y="53" width="396" height="230"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="TNQ-ff-er4"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q6x-tS-ylt">
+                                <rect key="frame" x="0.0" y="283" width="414" height="579"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dab-1s-5JH" firstAttribute="trailing" secondItem="4lA-Ag-Ual" secondAttribute="trailing" constant="9" id="CAz-ii-I1P"/>
+                            <constraint firstItem="4lA-Ag-Ual" firstAttribute="leading" secondItem="dab-1s-5JH" secondAttribute="leading" constant="9" id="LCW-d6-s9C"/>
+                            <constraint firstItem="Q6x-tS-ylt" firstAttribute="top" secondItem="4lA-Ag-Ual" secondAttribute="bottom" id="Rue-Tr-4G7"/>
+                            <constraint firstItem="Q6x-tS-ylt" firstAttribute="leading" secondItem="dab-1s-5JH" secondAttribute="leading" id="Vfo-2q-wbj"/>
+                            <constraint firstItem="dab-1s-5JH" firstAttribute="bottom" secondItem="Q6x-tS-ylt" secondAttribute="bottom" id="lkv-kN-wRI"/>
+                            <constraint firstItem="dab-1s-5JH" firstAttribute="trailing" secondItem="Q6x-tS-ylt" secondAttribute="trailing" id="qK3-Ur-eXl"/>
+                            <constraint firstItem="4lA-Ag-Ual" firstAttribute="top" secondItem="dab-1s-5JH" secondAttribute="top" constant="9" id="wog-Gm-nYy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dab-1s-5JH"/>
+                    </view>
+                    <connections>
+                        <outlet property="headerComponent" destination="4lA-Ag-Ual" id="ui1-gA-si2"/>
+                        <outlet property="tableView" destination="Q6x-tS-ylt" id="9Cv-9t-e80"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dyi-1R-4bh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1287" y="913"/>
+        </scene>
     </scenes>
 </document>

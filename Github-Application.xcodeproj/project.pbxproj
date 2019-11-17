@@ -20,6 +20,8 @@
 		B3220FD9238168910050C274 /* DetailHeaderComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3220FD8238168910050C274 /* DetailHeaderComponent.xib */; };
 		B3220FDC238178920050C274 /* HeaderCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3220FDB238178920050C274 /* HeaderCardComponent.swift */; };
 		B3220FDE238178AD0050C274 /* HeaderCardComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3220FDD238178AD0050C274 /* HeaderCardComponent.xib */; };
+		B3220FE0238182DC0050C274 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3220FDF238182DC0050C274 /* UserModel.swift */; };
+		B3220FE22381900B0050C274 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3220FE12381900B0050C274 /* UserDetailViewController.swift */; };
 		B337D6F3237DC62B00941E55 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337D6F2237DC62B00941E55 /* RepositoryModel.swift */; };
 		B337D6F5237DC67300941E55 /* TextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337D6F4237DC67300941E55 /* TextModel.swift */; };
 		B337D6F8237DDAE200941E55 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337D6F7237DDAE200941E55 /* Endpoints.swift */; };
@@ -75,6 +77,8 @@
 		B3220FD8238168910050C274 /* DetailHeaderComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailHeaderComponent.xib; sourceTree = "<group>"; };
 		B3220FDB238178920050C274 /* HeaderCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCardComponent.swift; sourceTree = "<group>"; };
 		B3220FDD238178AD0050C274 /* HeaderCardComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCardComponent.xib; sourceTree = "<group>"; };
+		B3220FDF238182DC0050C274 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = "Github-Application/Component/HeaderCardComponents/UserModel.swift"; sourceTree = SOURCE_ROOT; };
+		B3220FE12381900B0050C274 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		B337D6F2237DC62B00941E55 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RepositoryModel.swift; path = "Github-Application/RepositoryModel.swift"; sourceTree = SOURCE_ROOT; };
 		B337D6F4237DC67300941E55 /* TextModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextModel.swift; path = "Github-Application/TextModel.swift"; sourceTree = SOURCE_ROOT; };
 		B337D6F7237DDAE200941E55 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
@@ -257,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				B369CE052374AD6B00769209 /* RepoSearchViewController.swift */,
+				B3220FE12381900B0050C274 /* UserDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 			children = (
 				B337D6F2237DC62B00941E55 /* RepositoryModel.swift */,
 				B337D6F4237DC67300941E55 /* TextModel.swift */,
+				B3220FDF238182DC0050C274 /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -595,6 +601,7 @@
 				B369CE3F2377334500769209 /* UserService.swift in Sources */,
 				B3220FD123802DD40050C274 /* RepositoryTableViewCell.swift in Sources */,
 				B337D6F3237DC62B00941E55 /* RepositoryModel.swift in Sources */,
+				B3220FE22381900B0050C274 /* UserDetailViewController.swift in Sources */,
 				B369CE062374AD6B00769209 /* RepoSearchViewController.swift in Sources */,
 				B337D6F5237DC67300941E55 /* TextModel.swift in Sources */,
 				B337D6F8237DDAE200941E55 /* Endpoints.swift in Sources */,
@@ -604,6 +611,7 @@
 				B369CE3A2376049500769209 /* SwinjectStoryboard.swift in Sources */,
 				B3220FD72381687B0050C274 /* DetailHeaderComponent.swift in Sources */,
 				B3220FCC23800E510050C274 /* Fixtures.swift in Sources */,
+				B3220FE0238182DC0050C274 /* UserModel.swift in Sources */,
 				B3220FD4238167AB0050C274 /* Component.swift in Sources */,
 				B369CE042374AD6B00769209 /* SceneDelegate.swift in Sources */,
 				B3220FC7237FFBBA0050C274 /* Promise.swift in Sources */,

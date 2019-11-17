@@ -3,6 +3,9 @@ import UIKit
 class DetailHeaderComponentView: UIView {
     @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var firstHeaderCardView: HeaderCardComponentView!
+    @IBOutlet weak var secondHeaderCardView: HeaderCardComponentView!
+    @IBOutlet weak var thirdHeaderCardView: HeaderCardComponentView!
 }
 
 @IBDesignable

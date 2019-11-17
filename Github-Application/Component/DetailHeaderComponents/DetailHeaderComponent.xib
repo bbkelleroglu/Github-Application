@@ -76,6 +76,9 @@
             <connections>
                 <outlet property="avatarImage" destination="XdO-jc-uc4" id="U8z-5b-TXK"/>
                 <outlet property="descriptionLabel" destination="9LU-bf-m6A" id="Ycz-BD-hTg"/>
+                <outlet property="firstHeaderCardView" destination="bIR-YO-NeN" id="Fst-e6-nhE"/>
+                <outlet property="secondHeaderCardView" destination="cKz-Ho-sTM" id="Cfn-fe-Hq6"/>
+                <outlet property="thirdHeaderCardView" destination="bZX-Jc-35h" id="xey-kD-8Iz"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="104.46428571428571"/>
         </view>
