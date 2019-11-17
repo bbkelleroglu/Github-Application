@@ -2,7 +2,7 @@ import SegueManager
 import UIKit
 
 class RepoSearchViewController: SegueManagerViewController, RepositoryTableViewCellDelegate {
-    func repositoryTableViewCellDidSelectAvatar(repositoryCell: RepositoryTableViewCell) {
+    func repositoryTableViewCellDidSelectAvatar(repositoryCell: RepositoryCell) {
         guard let indexPath = tableView.indexPath(for: repositoryCell) else { return }
         let username = repos[indexPath.row].owner.login
         performSegue(withIdentifier: R.segue.repoSearchViewController.userDetail) { segue in
@@ -34,6 +34,7 @@ class RepoSearchViewController: SegueManagerViewController, RepositoryTableViewC
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchBar()
+        tableView.register(R.nib.repositoryCell)
     }
 
     private func setupSearchBar() {
@@ -72,7 +73,7 @@ extension RepoSearchViewController: UITableViewDataSource {
 }
 extension RepoSearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50.0
+        return 60.0
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == numberOfItems - 1 && self.moreItems {

@@ -160,12 +160,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
   struct nib {
     /// Nib `DetailHeaderComponent`.
     static let detailHeaderComponent = _R.nib._DetailHeaderComponent()
     /// Nib `HeaderCardComponent`.
     static let headerCardComponent = _R.nib._HeaderCardComponent()
+    /// Nib `RepositoryCell`.
+    static let repositoryCell = _R.nib._RepositoryCell()
 
     #if os(iOS) || os(tvOS)
     /// `UINib(name: "DetailHeaderComponent", in: bundle)`
@@ -183,6 +185,14 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "RepositoryCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.repositoryCell) instead")
+    static func repositoryCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.repositoryCell)
+    }
+    #endif
+
     static func detailHeaderComponent(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> DetailHeaderComponentView? {
       return R.nib.detailHeaderComponent.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? DetailHeaderComponentView
     }
@@ -191,13 +201,17 @@ struct R: Rswift.Validatable {
       return R.nib.headerCardComponent.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HeaderCardComponentView
     }
 
+    static func repositoryCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> RepositoryCell? {
+      return R.nib.repositoryCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? RepositoryCell
+    }
+
     fileprivate init() {}
   }
 
   /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `repositoryCell`.
-    static let repositoryCell: Rswift.ReuseIdentifier<RepositoryTableViewCell> = Rswift.ReuseIdentifier(identifier: "repositoryCell")
+    static let repositoryCell: Rswift.ReuseIdentifier<RepositoryCell> = Rswift.ReuseIdentifier(identifier: "repositoryCell")
 
     fileprivate init() {}
   }
@@ -241,6 +255,20 @@ struct _R: Rswift.Validatable {
 
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HeaderCardComponentView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HeaderCardComponentView
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _RepositoryCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = RepositoryCell
+
+      let bundle = R.hostingBundle
+      let identifier = "repositoryCell"
+      let name = "RepositoryCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> RepositoryCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? RepositoryCell
       }
 
       fileprivate init() {}
