@@ -8,4 +8,7 @@ struct UserModelResponse: Decodable {
     let followers: Int
     let following: Int
     let bio: String?
+    let createdAt: Date
+    let updatedAt: Date
+    let location: String?
 }

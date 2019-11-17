@@ -160,6 +160,48 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.image` struct is generated, and contains static references to 4 images.
+  struct image {
+    /// Image `icons8-calendar-50`.
+    static let icons8Calendar50 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icons8-calendar-50")
+    /// Image `icons8-marker-50`.
+    static let icons8Marker50 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icons8-marker-50")
+    /// Image `icons8-star-50`.
+    static let icons8Star50 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icons8-star-50")
+    /// Image `icons8-time-50`.
+    static let icons8Time50 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icons8-time-50")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icons8-calendar-50", bundle: ..., traitCollection: ...)`
+    static func icons8Calendar50(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icons8Calendar50, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icons8-marker-50", bundle: ..., traitCollection: ...)`
+    static func icons8Marker50(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icons8Marker50, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icons8-star-50", bundle: ..., traitCollection: ...)`
+    static func icons8Star50(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icons8Star50, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icons8-time-50", bundle: ..., traitCollection: ...)`
+    static func icons8Time50(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icons8Time50, compatibleWith: traitCollection)
+    }
+    #endif
+
+    fileprivate init() {}
+  }
+
   /// This `R.nib` struct is generated, and contains static references to 3 nibs.
   struct nib {
     /// Nib `DetailHeaderComponent`.
@@ -208,8 +250,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 2 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `profileDetailCell`.
+    static let profileDetailCell: Rswift.ReuseIdentifier<ProfileDetailCell> = Rswift.ReuseIdentifier(identifier: "profileDetailCell")
     /// Reuse identifier `repositoryCell`.
     static let repositoryCell: Rswift.ReuseIdentifier<RepositoryCell> = Rswift.ReuseIdentifier(identifier: "repositoryCell")
 
