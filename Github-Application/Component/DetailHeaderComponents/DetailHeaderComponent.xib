@@ -16,21 +16,21 @@
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="S8E-id-fxB" userLabel="Card Stack">
                     <rect key="frame" x="0.0" y="174" width="414" height="50"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIR-YO-NeN" customClass="HeaderCardComponentView" customModule="Github_Application" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIR-YO-NeN" customClass="HeaderCardComponent" customModule="Github_Application" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="122.5" height="50"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="WWT-ed-m7R"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKz-Ho-sTM" customClass="HeaderCardComponentView" customModule="Github_Application" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKz-Ho-sTM" customClass="HeaderCardComponent" customModule="Github_Application" customModuleProvider="target">
                             <rect key="frame" x="145.5" y="0.0" width="123" height="50"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="amz-eM-1zG"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZX-Jc-35h" customClass="HeaderCardComponentView" customModule="Github_Application" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZX-Jc-35h" customClass="HeaderCardComponent" customModule="Github_Application" customModuleProvider="target">
                             <rect key="frame" x="291.5" y="0.0" width="122.5" height="50"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
@@ -76,9 +76,9 @@
             <connections>
                 <outlet property="avatarImage" destination="XdO-jc-uc4" id="U8z-5b-TXK"/>
                 <outlet property="descriptionLabel" destination="9LU-bf-m6A" id="Ycz-BD-hTg"/>
-                <outlet property="firstHeaderCardView" destination="bIR-YO-NeN" id="Fst-e6-nhE"/>
-                <outlet property="secondHeaderCardView" destination="cKz-Ho-sTM" id="Cfn-fe-Hq6"/>
-                <outlet property="thirdHeaderCardView" destination="bZX-Jc-35h" id="xey-kD-8Iz"/>
+                <outlet property="firstHeaderCardView" destination="bIR-YO-NeN" id="5U0-99-Soi"/>
+                <outlet property="secondHeaderCardView" destination="cKz-Ho-sTM" id="Vb3-Ho-LAM"/>
+                <outlet property="thirdHeaderCardView" destination="bZX-Jc-35h" id="GdH-qv-eQF"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="104.46428571428571"/>
         </view>

@@ -5,7 +5,9 @@ class RepoSearchViewController: SegueManagerViewController, RepositoryTableViewC
     func repositoryTableViewCellDidSelectAvatar(repositoryCell: RepositoryTableViewCell) {
         guard let indexPath = tableView.indexPath(for: repositoryCell) else { return }
         let username = repos[indexPath.row].owner.login
-        print("Username: \(username)")
+        performSegue(withIdentifier: R.segue.repoSearchViewController.userDetail) { segue in
+            segue.destination.username = username
+        }
     }
 
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {

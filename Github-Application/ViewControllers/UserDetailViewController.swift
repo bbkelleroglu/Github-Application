@@ -1,10 +1,18 @@
 import UIKit
 
 class UserDetailViewController: UIViewController {
+    @IBOutlet weak var detailHeaderComponent: DetailHeaderComponent!
+    var userService: UserService!
+    var username: String?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        guard let username = username else { return }
+        userService.userDetail(username: username).done {
+            self.detailHeaderComponent.configureUserDetail(for: $0)
+        }.catch { error in
+            print(error)
+        }
     }
 
     /*

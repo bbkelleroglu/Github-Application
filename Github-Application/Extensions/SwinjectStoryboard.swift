@@ -30,5 +30,8 @@ extension SwinjectStoryboard {
         container.storyboardInitCompleted(RepoSearchViewController.self) { r, c in
             c.searchService = r~>
         }
+        container.storyboardInitCompleted(UserDetailViewController.self) { r, c in
+            c.userService = r~>
+        }
     }
 }

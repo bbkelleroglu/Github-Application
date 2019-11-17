@@ -2,7 +2,7 @@ import Foundation
 
 struct UserModelResponse: Decodable {
     let login: String
-    let name: String
+    let name: String?
     let avatarUrl: URL?
     let publicRepos: Int
     let followers: Int

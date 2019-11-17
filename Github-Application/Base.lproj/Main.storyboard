@@ -127,6 +127,7 @@
                     <navigationItem key="navigationItem" title="Repository Search" id="wsK-VH-fWV"/>
                     <connections>
                         <outlet property="tableView" destination="BwC-hI-XCV" id="0CD-mo-wsv"/>
+                        <segue destination="3kC-3z-WY0" kind="show" identifier="userDetail" id="1xD-Fb-yn1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -150,6 +151,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e8Z-OB-Icz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--User Detail View Controller-->
+        <scene sceneID="7fS-Jr-LKa">
+            <objects>
+                <viewController id="3kC-3z-WY0" customClass="UserDetailViewController" customModule="Github_Application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VHi-7r-m5W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9pJ-dE-rsH" customClass="DetailHeaderComponent" customModule="Github_Application" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="140" width="414" height="230"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="mfT-sm-iIB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9pJ-dE-rsH" firstAttribute="top" secondItem="cuT-UV-5D6" secondAttribute="top" id="1EO-KQ-mrV"/>
+                            <constraint firstItem="9pJ-dE-rsH" firstAttribute="leading" secondItem="cuT-UV-5D6" secondAttribute="leading" id="Zcd-5O-gBW"/>
+                            <constraint firstItem="cuT-UV-5D6" firstAttribute="trailing" secondItem="9pJ-dE-rsH" secondAttribute="trailing" id="gl9-yi-m0e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cuT-UV-5D6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OrX-1T-9Ql"/>
+                    <connections>
+                        <outlet property="detailHeaderComponent" destination="9pJ-dE-rsH" id="gFf-W9-WS9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k9a-ad-fKi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1722" y="877"/>
         </scene>
     </scenes>
 </document>
