@@ -1,5 +1,8 @@
 import AlamofireImage
 import UIKit
+protocol RepositoryTableViewCellDelegate: UIGestureRecognizerDelegate {
+    func repositoryTableViewCellDidSelectAvatar(repositoryCell: RepositoryTableViewCell)
+}
 class RepositoryTableViewCell: UITableViewCell {
     @IBOutlet weak var repoAvatarImage: UIImageView!
     @IBOutlet weak var repoName: UILabel!
@@ -7,6 +10,21 @@ class RepositoryTableViewCell: UITableViewCell {
     @IBOutlet weak var starIcon: UIImageView!
     @IBOutlet weak var starCount: UILabel!
     @IBOutlet weak var languageName: UILabel!
+    weak var delegate: RepositoryTableViewCellDelegate? {
+        didSet {
+            gestureRecognizer.delegate = delegate
+        }
+    }
+    let gestureRecognizer = UITapGestureRecognizer()
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initialize()
+    }
+
+    private func initialize() {
+        gestureRecognizer.addTarget(self, action: #selector(avatarClicked(_:)))
+    }
 
     func configure(for repository: RepositoryModel) {
         repoAvatarImage.layer.cornerRadius = repoAvatarImage.frame.width / 2
@@ -26,5 +44,11 @@ class RepositoryTableViewCell: UITableViewCell {
             repoAvatarImage.af_cancelImageRequest()
             repoAvatarImage.image = .checkmark
         }
+        repoAvatarImage.addGestureRecognizer(gestureRecognizer)
+    }
+
+    @objc
+    func avatarClicked(_ sender: UITapGestureRecognizer) {
+        self.delegate?.repositoryTableViewCellDidSelectAvatar(repositoryCell: self)
     }
 }

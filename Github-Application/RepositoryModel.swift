@@ -14,4 +14,5 @@ struct RepositoryResponseModel: Decodable {
 }
 struct Owner: Codable {
     let avatarUrl: URL?
+    let login: String
 }

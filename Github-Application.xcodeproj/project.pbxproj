@@ -22,6 +22,7 @@
 		B3220FDE238178AD0050C274 /* HeaderCardComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3220FDD238178AD0050C274 /* HeaderCardComponent.xib */; };
 		B3220FE0238182DC0050C274 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3220FDF238182DC0050C274 /* UserModel.swift */; };
 		B3220FE22381900B0050C274 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3220FE12381900B0050C274 /* UserDetailViewController.swift */; };
+		B3220FE42381AB5D0050C274 /* userDetail.yml in Resources */ = {isa = PBXBuildFile; fileRef = B3220FE32381AB5D0050C274 /* userDetail.yml */; };
 		B337D6F3237DC62B00941E55 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337D6F2237DC62B00941E55 /* RepositoryModel.swift */; };
 		B337D6F5237DC67300941E55 /* TextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337D6F4237DC67300941E55 /* TextModel.swift */; };
 		B337D6F8237DDAE200941E55 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337D6F7237DDAE200941E55 /* Endpoints.swift */; };
@@ -79,6 +80,7 @@
 		B3220FDD238178AD0050C274 /* HeaderCardComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCardComponent.xib; sourceTree = "<group>"; };
 		B3220FDF238182DC0050C274 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = "Github-Application/Component/HeaderCardComponents/UserModel.swift"; sourceTree = SOURCE_ROOT; };
 		B3220FE12381900B0050C274 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		B3220FE32381AB5D0050C274 /* userDetail.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = userDetail.yml; sourceTree = "<group>"; };
 		B337D6F2237DC62B00941E55 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RepositoryModel.swift; path = "Github-Application/RepositoryModel.swift"; sourceTree = SOURCE_ROOT; };
 		B337D6F4237DC67300941E55 /* TextModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextModel.swift; path = "Github-Application/TextModel.swift"; sourceTree = SOURCE_ROOT; };
 		B337D6F7237DDAE200941E55 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		B3220FC823800AB70050C274 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B3220FE32381AB5D0050C274 /* userDetail.yml */,
 				B3220FC923800E250050C274 /* repository.yml */,
 				B3220FCE238010200050C274 /* R.generated.swift */,
 				B3220FCB23800E510050C274 /* Fixtures.swift */,
@@ -430,6 +433,7 @@
 				B369CE0B2374AD6C00769209 /* Assets.xcassets in Resources */,
 				B3220FCA23800E250050C274 /* repository.yml in Resources */,
 				B369CE092374AD6B00769209 /* Main.storyboard in Resources */,
+				B3220FE42381AB5D0050C274 /* userDetail.yml in Resources */,
 				B3220FD9238168910050C274 /* DetailHeaderComponent.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

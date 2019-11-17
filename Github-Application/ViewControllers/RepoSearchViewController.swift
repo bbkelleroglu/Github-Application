@@ -1,9 +1,18 @@
 import SegueManager
 import UIKit
 
-class RepoSearchViewController: SegueManagerViewController {
-    @IBOutlet weak var tableView: UITableView!
+class RepoSearchViewController: SegueManagerViewController, RepositoryTableViewCellDelegate {
+    func repositoryTableViewCellDidSelectAvatar(repositoryCell: RepositoryTableViewCell) {
+        guard let indexPath = tableView.indexPath(for: repositoryCell) else { return }
+        let username = repos[indexPath.row].owner.login
+        print("Username: \(username)")
+    }
 
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        touch.view?.isDescendant(of: tableView) == true
+    }
+
+    @IBOutlet weak var tableView: UITableView!
     var searchService: SearchService!
     private var repos = [RepositoryModel]()
     var nextPageUrl: String? = ""
@@ -55,6 +64,7 @@ extension RepoSearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.repositoryCell, for: indexPath)!
         cell.configure(for: repos[indexPath.row])
+        cell.delegate = self
         return cell
     }
 }

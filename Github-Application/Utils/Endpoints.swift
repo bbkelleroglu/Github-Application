@@ -5,6 +5,6 @@ enum Endpoints {
         static let search = Endpoint<TextModel, RepositoryResponseModel>(.get, "/search/repositories", encoding: .query)
     }
     enum Users {
-        static let userDetail = Endpoint<Nothing, UserModel>(.get, "/users/{{username}}", encoding: .query)
+        static let userDetail = Endpoint<Nothing, UserModelResponse>(.get, "/users/{{username}}", encoding: .query)
     }
 }

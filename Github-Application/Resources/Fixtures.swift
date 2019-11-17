@@ -10,8 +10,10 @@ private func loadFixture<T: Decodable>(url: URL, decoder: YAMLDecoder) -> T {
 
 class Fixtures {
     let repository: [RepositoryModel]
+    let userDetail: UserModelResponse
 
     init(yamlDecoder: YAMLDecoder) {
         repository = loadFixture(url: R.file.repositoryYml()!, decoder: yamlDecoder)
+        userDetail = loadFixture(url: R.file.userDetailYml()!, decoder: yamlDecoder)
     }
 }
