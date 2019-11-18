@@ -9,10 +9,10 @@
 
 
 ## Screenshots
-<img width="200" alt="Screen Shot 2019-11-19 at 01 07 05" src="https://user-images.githubusercontent.com/47689166/69098306-5d37c000-0a69-11ea-988d-83c26ebeba5c.png">&nbsp;
-<img width="200" alt="Screen Shot 2019-11-19 at 01 05 48" src="https://user-images.githubusercontent.com/47689166/69098309-5dd05680-0a69-11ea-92c2-2f6832e82687.png">&nbsp;
-<img width="200" alt="Screen Shot 2019-11-19 at 01 03 28" src="https://user-images.githubusercontent.com/47689166/69098312-5f018380-0a69-11ea-9b33-4d2aa986cb7b.png">&nbsp;
-<img width="200" alt="Screen Shot 2019-11-19 at 01 02 18" src="https://user-images.githubusercontent.com/47689166/69098315-6163dd80-0a69-11ea-9629-5cd29980310f.png">&nbsp;
+<img width="280" alt="Screen Shot 2019-11-19 at 01 07 05" src="https://user-images.githubusercontent.com/47689166/69098306-5d37c000-0a69-11ea-988d-83c26ebeba5c.png">&nbsp;
+<img width="280" alt="Screen Shot 2019-11-19 at 01 05 48" src="https://user-images.githubusercontent.com/47689166/69098309-5dd05680-0a69-11ea-92c2-2f6832e82687.png">&nbsp;
+<img width="280" alt="Screen Shot 2019-11-19 at 01 03 28" src="https://user-images.githubusercontent.com/47689166/69098312-5f018380-0a69-11ea-9b33-4d2aa986cb7b.png">&nbsp;
+<img width="280" alt="Screen Shot 2019-11-19 at 01 02 18" src="https://user-images.githubusercontent.com/47689166/69098315-6163dd80-0a69-11ea-9629-5cd29980310f.png">&nbsp;
 
 ## Building and Running
 After you clone the repo, make sure that 
