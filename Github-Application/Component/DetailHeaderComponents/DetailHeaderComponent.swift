@@ -36,6 +36,21 @@ class DetailHeaderComponent: Component {
         view.thirdHeaderCardView.countText = String(user.publicRepos)
         view.thirdHeaderCardView.nameText = "Repository"
     }
+    func configureRepoDetail(for repo: RepositoryModel)  {
+        if let image = repo.owner.avatarUrl {
+            view.avatarImage.af_setImage(withURL: image)
+        } else {
+            view.avatarImage.af_cancelImageRequest()
+            view.avatarImage.image = .checkmark
+        }
+        view.descriptionLabel.text = repo.description
+        view.firstHeaderCardView.countText = String(repo.stargazersCount)
+        view.firstHeaderCardView.nameText = "Stars"
+        view.secondHeaderCardView.countText = String(repo.watchersCount)
+        view.secondHeaderCardView.nameText = "Watchers"
+        view.thirdHeaderCardView.countText = String(repo.forksCount)
+        view.thirdHeaderCardView.nameText = "Forks"
+    }
 
     override func didLoad(subview: UIView) {
         view = (subview as! DetailHeaderComponentView)

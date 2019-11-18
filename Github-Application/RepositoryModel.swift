@@ -6,6 +6,8 @@ struct RepositoryModel: Codable {
     let description: String?
     let owner: Owner
     let stargazersCount: Int
+    let watchersCount: Int
+    let forksCount: Int
     let language: String?
 }
 
