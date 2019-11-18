@@ -1,6 +1,7 @@
 ${PODS_ROOT}/Target Support Files/Pods-Github-Application-Github-ApplicationUITests/Pods-Github-Application-Github-ApplicationUITests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework
+${BUILT_PRODUCTS_DIR}/CancellablePromiseKit/CancellablePromiseKit.framework
 ${BUILT_PRODUCTS_DIR}/GRMustache.swift/Mustache.framework
 ${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework
 ${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework

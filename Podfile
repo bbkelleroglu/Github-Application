@@ -19,6 +19,7 @@ target 'Github-Application' do
   pod 'R.swift'
   pod 'SegueManager/R.swift'
   pod 'Yams'
+  pod 'CancellablePromiseKit'
   # User Interface
 
 

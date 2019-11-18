@@ -18,3 +18,8 @@ struct Owner: Codable {
     let avatarUrl: URL?
     let login: String
 }
+
+struct RepositoryPaginate: PageRequest {
+    let page: Int
+    var next: RepositoryPaginate { RepositoryPaginate(page: page + 1) }
+}

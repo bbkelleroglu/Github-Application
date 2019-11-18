@@ -1,3 +1,4 @@
+import PromiseKit
 import UIKit
 
 class UserDetailViewController: UIViewController, RepositoryTableViewCellDelegate {
@@ -13,37 +14,55 @@ class UserDetailViewController: UIViewController, RepositoryTableViewCellDelegat
     var userService: UserService!
     var username: String?
     var details = [(UIImage, String, String)]()
-    var userRepositories = [RepositoryModel]()
+    var pages = [Page<RepositoryModel, RepositoryPaginate>]()
+    var userRepositories: [RepositoryModel] { pages.flatMap { $0.data } }
     var userRepositoriesService: RepositoryService!
     var fullname: String?
+    private weak var currentPromise: Promise<Void>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let username = username else { return }
+        loadRepostories()
+        loadUserDetails()
+        tableView.register(R.nib.repositoryCell)
+    }
 
-        userRepositoriesService.userRepositoryService(username: username).done {
-            self.userRepositories += $0
-            self.tableView.reloadData()
-        }.catch { error in
-            print(error)
-        }
-        userService.userDetail(username: username).done {
+    func loadUserDetails() {
+        userService.userDetail(username: username!).done {
             self.detailHeaderComponent.configureUserDetail(for: $0)
             self.details = [
                 (R.image.icons8Calendar50()!, "Created at", Date.getFormattedDate(date: $0.createdAt)),
                 (R.image.icons8Time50()!, "Updated at", Date.getFormattedDate(date: $0.updatedAt)),
                 (R.image.icons8Marker50()!, "Location", $0.location ?? "-")
             ]
+            self.navigationItem.setTitle(title: self.username!, subtitle: $0.name ?? "")
             self.tableView.reloadData()
         }.catch { error in
             print(error)
         }
-        navigationItem.setTitle(title: "bbkelleroglu", subtitle: "Burak Kelleroglu")
-        tableView.register(R.nib.repositoryCell)
+    }
+
+    func loadRepostories(page: RepositoryPaginate = RepositoryPaginate(page: 1)) {
+        currentPromise = userRepositoriesService.userRepositoryService(username: username!, body: page).done {
+            self.pages.append($0)
+            let range = (self.userRepositories.count - $0.data.count)..<self.userRepositories.count
+            let indexPaths = range.map { IndexPath(item: $0, section: 1) }
+            self.tableView.insertRows(at: indexPaths, with: .automatic)
+        }
+        currentPromise?.catch { error in
+            print(error)
+        }
     }
 }
+
 extension UserDetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.section == 1 && indexPath.row == userRepositories.count - 1 && currentPromise?.isResolved != false {
+            loadRepostories(page: pages.last!.nextPageRequest)
+        }
+    }
 }
+
 extension UserDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
