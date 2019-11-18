@@ -171,8 +171,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 4 images.
+  /// This `R.image` struct is generated, and contains static references to 5 images.
   struct image {
+    /// Image `back`.
+    static let back = Rswift.ImageResource(bundle: R.hostingBundle, name: "back")
     /// Image `icons8-calendar-50`.
     static let icons8Calendar50 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icons8-calendar-50")
     /// Image `icons8-marker-50`.
@@ -181,6 +183,13 @@ struct R: Rswift.Validatable {
     static let icons8Star50 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icons8-star-50")
     /// Image `icons8-time-50`.
     static let icons8Time50 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icons8-time-50")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "back", bundle: ..., traitCollection: ...)`
+    static func back(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.back, compatibleWith: traitCollection)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "icons8-calendar-50", bundle: ..., traitCollection: ...)`
@@ -362,7 +371,7 @@ struct _R: Rswift.Validatable {
 
     #if os(iOS) || os(tvOS)
     struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = UIKit.UINavigationController
+      typealias InitialController = GithubNavigationController
 
       let bundle = R.hostingBundle
       let name = "Main"

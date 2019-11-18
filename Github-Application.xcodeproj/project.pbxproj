@@ -27,6 +27,7 @@
 		B3220FEB2381E3CC0050C274 /* ProfileDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3220FEA2381E3CC0050C274 /* ProfileDetailCell.swift */; };
 		B3220FF12382A2C00050C274 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3220FF02382A2C00050C274 /* Date.swift */; };
 		B3220FF32382C8840050C274 /* RepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3220FF22382C8840050C274 /* RepoDetailViewController.swift */; };
+		B3220FF52382E5710050C274 /* GithubNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3220FF42382E5710050C274 /* GithubNavigationController.swift */; };
 		B337D6F3237DC62B00941E55 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337D6F2237DC62B00941E55 /* RepositoryModel.swift */; };
 		B337D6F5237DC67300941E55 /* TextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337D6F4237DC67300941E55 /* TextModel.swift */; };
 		B337D6F8237DDAE200941E55 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337D6F7237DDAE200941E55 /* Endpoints.swift */; };
@@ -89,6 +90,7 @@
 		B3220FEA2381E3CC0050C274 /* ProfileDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailCell.swift; sourceTree = "<group>"; };
 		B3220FF02382A2C00050C274 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		B3220FF22382C8840050C274 /* RepoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailViewController.swift; sourceTree = "<group>"; };
+		B3220FF42382E5710050C274 /* GithubNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubNavigationController.swift; sourceTree = "<group>"; };
 		B337D6F2237DC62B00941E55 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RepositoryModel.swift; path = "Github-Application/RepositoryModel.swift"; sourceTree = SOURCE_ROOT; };
 		B337D6F4237DC67300941E55 /* TextModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextModel.swift; path = "Github-Application/TextModel.swift"; sourceTree = SOURCE_ROOT; };
 		B337D6F7237DDAE200941E55 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				B369CE052374AD6B00769209 /* RepoSearchViewController.swift */,
 				B3220FE12381900B0050C274 /* UserDetailViewController.swift */,
 				B3220FF22382C8840050C274 /* RepoDetailViewController.swift */,
+				B3220FF42382E5710050C274 /* GithubNavigationController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -632,6 +635,7 @@
 				B369CE362374BF7C00769209 /* Config.swift in Sources */,
 				B369CE022374AD6B00769209 /* AppDelegate.swift in Sources */,
 				B3220FEB2381E3CC0050C274 /* ProfileDetailCell.swift in Sources */,
+				B3220FF52382E5710050C274 /* GithubNavigationController.swift in Sources */,
 				B369CE3D2377333B00769209 /* RepositoryService.swift in Sources */,
 				B369CE3A2376049500769209 /* SwinjectStoryboard.swift in Sources */,
 				B3220FD72381687B0050C274 /* DetailHeaderComponent.swift in Sources */,

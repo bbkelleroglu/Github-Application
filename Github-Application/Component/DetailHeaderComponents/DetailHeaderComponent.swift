@@ -36,7 +36,7 @@ class DetailHeaderComponent: Component {
         view.thirdHeaderCardView.countText = String(user.publicRepos)
         view.thirdHeaderCardView.nameText = "Repository"
     }
-    func configureRepoDetail(for repo: RepositoryModel)  {
+    func configureRepoDetail(for repo: RepositoryModel) {
         if let image = repo.owner.avatarUrl {
             view.avatarImage.af_setImage(withURL: image)
         } else {
