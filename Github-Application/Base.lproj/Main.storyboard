@@ -171,5 +171,20 @@
             </objects>
             <point key="canvasLocation" x="1721.7391304347827" y="876.5625"/>
         </scene>
+        <!--Repo Detail View Controller-->
+        <scene sceneID="AzZ-Sh-bNx">
+            <objects>
+                <viewController id="cKJ-be-nRc" customClass="RepoDetailViewController" customModule="Github_Application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NHO-sS-QqP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="UJX-IC-RD1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vnv-2N-i2t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2567" y="875"/>
+        </scene>
     </scenes>
 </document>
