@@ -2,7 +2,6 @@ import UIKit
 
 class UserDetailViewController: UIViewController, RepositoryTableViewCellDelegate {
     func repositoryTableViewCellDidSelectAvatar(repositoryCell: RepositoryCell) {
-        
     }
 
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {

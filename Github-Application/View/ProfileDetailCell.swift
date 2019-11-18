@@ -10,5 +10,4 @@ class ProfileDetailCell: UITableViewCell {
         titleLabel.text = title
         valueLabel.text = value
     }
-
 }
