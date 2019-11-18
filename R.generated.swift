@@ -171,12 +171,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 5 images.
+  /// This `R.image` struct is generated, and contains static references to 6 images.
   struct image {
     /// Image `back`.
     static let back = Rswift.ImageResource(bundle: R.hostingBundle, name: "back")
     /// Image `icons8-calendar-50`.
     static let icons8Calendar50 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icons8-calendar-50")
+    /// Image `icons8-code-35`.
+    static let icons8Code35 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icons8-code-35")
     /// Image `icons8-marker-50`.
     static let icons8Marker50 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icons8-marker-50")
     /// Image `icons8-star-50`.
@@ -195,6 +197,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "icons8-calendar-50", bundle: ..., traitCollection: ...)`
     static func icons8Calendar50(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icons8Calendar50, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icons8-code-35", bundle: ..., traitCollection: ...)`
+    static func icons8Code35(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icons8Code35, compatibleWith: traitCollection)
     }
     #endif
 
@@ -296,12 +305,19 @@ struct R: Rswift.Validatable {
 struct _R: Rswift.Validatable {
   static func validate() throws {
     #if os(iOS) || os(tvOS)
+    try nib.validate()
+    #endif
+    #if os(iOS) || os(tvOS)
     try storyboard.validate()
     #endif
   }
 
   #if os(iOS) || os(tvOS)
-  struct nib {
+  struct nib: Rswift.Validatable {
+    static func validate() throws {
+      try _RepositoryCell.validate()
+    }
+
     struct _DetailHeaderComponent: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "DetailHeaderComponent"
@@ -324,7 +340,7 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
 
-    struct _RepositoryCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+    struct _RepositoryCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType, Rswift.Validatable {
       typealias ReusableType = RepositoryCell
 
       let bundle = R.hostingBundle
@@ -333,6 +349,13 @@ struct _R: Rswift.Validatable {
 
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> RepositoryCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? RepositoryCell
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "icons8-code-35", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icons8-code-35' is used in nib 'RepositoryCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icons8-star-50", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icons8-star-50' is used in nib 'RepositoryCell', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
       }
 
       fileprivate init() {}

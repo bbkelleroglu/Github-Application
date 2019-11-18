@@ -1,27 +1,27 @@
 import UIKit
 extension UINavigationItem {
  func setTitle(title: String, subtitle: String) {
-        let one = UILabel()
-        one.text = title
-        one.font = UIFont.systemFont(ofSize: 17)
-        one.sizeToFit()
+        let titleLabel = UILabel()
+        titleLabel.text = title
+        titleLabel.font = UIFont.systemFont(ofSize: 17)
+        titleLabel.sizeToFit()
 
-        let two = UILabel()
-        two.text = subtitle
-        two.font = UIFont.systemFont(ofSize: 12)
-        two.textAlignment = .center
-        two.sizeToFit()
+        let subtitleLabel = UILabel()
+        subtitleLabel.text = subtitle
+        subtitleLabel.font = UIFont.systemFont(ofSize: 12)
+        subtitleLabel.textAlignment = .center
+        subtitleLabel.sizeToFit()
 
-        let stackView = UIStackView(arrangedSubviews: [one, two])
+        let stackView = UIStackView(arrangedSubviews: [titleLabel, subtitleLabel])
         stackView.distribution = .equalCentering
         stackView.axis = .vertical
         stackView.alignment = .center
 
-        let width = max(one.frame.size.width, two.frame.size.width)
+        let width = max(titleLabel.frame.size.width, subtitleLabel.frame.size.width)
         stackView.frame = CGRect(x: 0, y: 0, width: width, height: 35)
 
-        one.sizeToFit()
-        two.sizeToFit()
+        titleLabel.sizeToFit()
+        subtitleLabel.sizeToFit()
 
         self.titleView = stackView
     }
