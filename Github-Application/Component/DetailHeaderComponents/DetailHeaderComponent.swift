@@ -1,4 +1,9 @@
+import Foundation
 import UIKit
+
+protocol ImageViewGestureDelegate: UIGestureRecognizerDelegate {
+    func avatarImageClickGesture()
+}
 @IBDesignable
 class DetailHeaderComponentView: UIView {
     @IBOutlet weak var avatarImage: UIImageView!
@@ -19,6 +24,21 @@ class DetailHeaderComponent: Component {
     var image: UIImage? {
         get { return view.avatarImage.image }
         set { view.avatarImage.image = newValue }
+    }
+    weak var delegate: ImageViewGestureDelegate? {
+        didSet {
+            gestureRecognizer.delegate = delegate
+        }
+    }
+    let gestureRecognizer = UITapGestureRecognizer()
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initialize()
+    }
+
+    private func initialize() {
+        gestureRecognizer.addTarget(self, action: #selector(avatarImageClick(_:)))
     }
 
     func configureUserDetail(for user: UserModelResponse) {
@@ -44,7 +64,8 @@ class DetailHeaderComponent: Component {
             view.avatarImage.af_cancelImageRequest()
             view.avatarImage.image = .checkmark
         }
-        view.descriptionLabel.text = repo.description ?? "Apparently, this user prefers to keep an air of mystery about them."
+        view.descriptionLabel.text = repo.description ??
+        "Apparently, this user prefers to keep an air of mystery about them."
         view.firstHeaderCardView.countText = String(repo.stargazersCount)
         view.firstHeaderCardView.nameText = "Stars"
         view.secondHeaderCardView.countText = String(repo.watchersCount)
@@ -52,8 +73,12 @@ class DetailHeaderComponent: Component {
         view.thirdHeaderCardView.countText = String(repo.forksCount)
         view.thirdHeaderCardView.nameText = "Forks"
     }
-
     override func didLoad(subview: UIView) {
         view = (subview as! DetailHeaderComponentView)
+        view.avatarImage.addGestureRecognizer(gestureRecognizer)
+    }
+    @objc
+    func avatarImageClick(_ sender: UITapGestureRecognizer) {
+        self.delegate?.avatarImageClickGesture()
     }
 }

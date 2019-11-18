@@ -3,7 +3,8 @@ import PromiseKit
 import RestingKit
 protocol RepositoryService {
     func searchRepo(body: TextModel) -> Promise<RepositoryPageModel>
-    func userRepositoryService(username: String, body: RepositoryPaginate) -> Promise<Page<RepositoryModel, RepositoryPaginate>>
+    func userRepositoryService(username: String, body: RepositoryPaginate) ->
+        Promise<Page<RepositoryModel, RepositoryPaginate>>
 }
 
 class GithubSearchService: RepositoryService {

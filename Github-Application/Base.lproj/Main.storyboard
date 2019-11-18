@@ -136,14 +136,6 @@
                                             <outlet property="valueLabel" destination="eVO-cc-RSX" id="Xt1-1t-Xhv"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="G0x-hD-msR">
-                                        <rect key="frame" x="0.0" y="79" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G0x-hD-msR" id="TUN-ms-Myy">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="3kC-3z-WY0" id="xdf-Rt-pSc"/>
@@ -171,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k9a-ad-fKi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1455" y="877"/>
+            <point key="canvasLocation" x="1341" y="944"/>
         </scene>
         <!--Repo Detail View Controller-->
         <scene sceneID="AzZ-Sh-bNx">
@@ -200,11 +192,15 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="m4P-4D-5AM"/>
                     <connections>
                         <outlet property="detailHeaderView" destination="FXZ-a5-qqo" id="Q4I-hY-9R6"/>
+                        <segue destination="3kC-3z-WY0" kind="show" identifier="userDetailFromRepoDetail" id="pkg-qF-34c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vnv-2N-i2t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2498.5507246376815" y="876.5625"/>
+            <point key="canvasLocation" x="2384" y="944"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="1xD-Fb-yn1"/>
+    </inferredMetricsTieBreakers>
 </document>

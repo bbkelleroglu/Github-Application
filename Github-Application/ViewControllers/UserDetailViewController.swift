@@ -1,14 +1,7 @@
 import PromiseKit
 import UIKit
 
-class UserDetailViewController: UIViewController, RepositoryTableViewCellDelegate {
-    func repositoryTableViewCellDidSelectAvatar(repositoryCell: RepositoryCell) {
-    }
-
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-        touch.view?.isDescendant(of: tableView) == true
-    }
-
+class UserDetailViewController: UIViewController {
     @IBOutlet weak var detailHeaderComponent: DetailHeaderComponent!
     @IBOutlet weak var tableView: UITableView!
     var userService: UserService!
@@ -91,7 +84,6 @@ extension UserDetailViewController: UITableViewDataSource {
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.repositoryCell, for: indexPath)!
             cell.configure(for: userRepositories[indexPath.row])
-            cell.delegate = self
             return cell
         default:
             fatalError("Cell is not available")

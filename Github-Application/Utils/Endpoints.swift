@@ -7,7 +7,7 @@ enum Endpoints {
     enum Users {
         static let userDetail = Endpoint<Nothing, UserModelResponse>(.get, "/users/{{username}}", encoding: .query)
         static let userRepositoryDetail = Endpoint<RepositoryPaginate, [RepositoryModel]>(.get,
-                                                                               "/users/{{username}}/repos",
-                                                                               encoding: .query)
+                                                                                          "/users/{{username}}/repos",
+                                                                                          encoding: .query)
     }
 }

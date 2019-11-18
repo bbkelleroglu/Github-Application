@@ -9,7 +9,7 @@ class RepoSearchViewController: SegueManagerViewController, RepositoryTableViewC
     private var pages = [Page<RepositoryModel, TextModel>]()
     private var repos: [RepositoryModel] {
         if searchBar.text?.isEmpty != false {
-           return initialRepos.flatMap{ $0.data }
+           return initialRepos.flatMap { $0.data }
         } else {
             return pages.flatMap { $0.data }
         }
@@ -46,7 +46,8 @@ class RepoSearchViewController: SegueManagerViewController, RepositoryTableViewC
     }
 
     private func loadNextPage() {
-        let nextPage = self.searchBar.text?.isEmpty == true ? initialRepos.last!.nextPageRequest : pages.last!.nextPageRequest
+        let nextPage = self.searchBar.text?.isEmpty == true ?
+            initialRepos.last!.nextPageRequest : pages.last!.nextPageRequest
         currentPromise?.cancel()
         currentPromise = searchService.searchRepo(body: nextPage).done {
             if self.searchBar.text?.isEmpty == true {

@@ -89,8 +89,25 @@ struct R: Rswift.Validatable {
   }
 
   #if os(iOS) || os(tvOS)
-  /// This `R.segue` struct is generated, and contains static references to 1 view controllers.
+  /// This `R.segue` struct is generated, and contains static references to 2 view controllers.
   struct segue {
+    /// This struct is generated for `RepoDetailViewController`, and contains static references to 1 segues.
+    struct repoDetailViewController {
+      /// Segue identifier `userDetailFromRepoDetail`.
+      static let userDetailFromRepoDetail: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, RepoDetailViewController, UserDetailViewController> = Rswift.StoryboardSegueIdentifier(identifier: "userDetailFromRepoDetail")
+
+      #if os(iOS) || os(tvOS)
+      /// Optionally returns a typed version of segue `userDetailFromRepoDetail`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func userDetailFromRepoDetail(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, RepoDetailViewController, UserDetailViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.repoDetailViewController.userDetailFromRepoDetail, segue: segue)
+      }
+      #endif
+
+      fileprivate init() {}
+    }
+
     /// This struct is generated for `RepoSearchViewController`, and contains static references to 2 segues.
     struct repoSearchViewController {
       /// Segue identifier `repositoryDetail`.
