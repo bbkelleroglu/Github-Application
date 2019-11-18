@@ -31,6 +31,9 @@
 		B3220FF72382EEB10050C274 /* NavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3220FF62382EEB10050C274 /* NavigationItem.swift */; };
 		B3220FFC238305000050C274 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3220FFB238305000050C274 /* Page.swift */; };
 		B3220FFE23831BDF0050C274 /* NumberUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3220FFD23831BDF0050C274 /* NumberUtils.swift */; };
+		B322100F238335880050C274 /* TextModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B322100E238335880050C274 /* TextModelTest.swift */; };
+		B3221011238337660050C274 /* NumberUtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3221010238337660050C274 /* NumberUtilsTest.swift */; };
+		B3221013238339A40050C274 /* RepositoryPaginateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3221012238339A40050C274 /* RepositoryPaginateTests.swift */; };
 		B337D6F3237DC62B00941E55 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337D6F2237DC62B00941E55 /* RepositoryModel.swift */; };
 		B337D6F5237DC67300941E55 /* TextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337D6F4237DC67300941E55 /* TextModel.swift */; };
 		B337D6F8237DDAE200941E55 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337D6F7237DDAE200941E55 /* Endpoints.swift */; };
@@ -97,6 +100,9 @@
 		B3220FF62382EEB10050C274 /* NavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationItem.swift; sourceTree = "<group>"; };
 		B3220FFB238305000050C274 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		B3220FFD23831BDF0050C274 /* NumberUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberUtils.swift; sourceTree = "<group>"; };
+		B322100E238335880050C274 /* TextModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModelTest.swift; sourceTree = "<group>"; };
+		B3221010238337660050C274 /* NumberUtilsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberUtilsTest.swift; sourceTree = "<group>"; };
+		B3221012238339A40050C274 /* RepositoryPaginateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryPaginateTests.swift; sourceTree = "<group>"; };
 		B337D6F2237DC62B00941E55 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RepositoryModel.swift; path = "Github-Application/Models/RepositoryModel.swift"; sourceTree = SOURCE_ROOT; };
 		B337D6F4237DC67300941E55 /* TextModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextModel.swift; path = "Github-Application/Models/TextModel.swift"; sourceTree = SOURCE_ROOT; };
 		B337D6F7237DDAE200941E55 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
@@ -285,6 +291,9 @@
 			children = (
 				B369CE182374AD6C00769209 /* Github_ApplicationTests.swift */,
 				B369CE1A2374AD6C00769209 /* Info.plist */,
+				B322100E238335880050C274 /* TextModelTest.swift */,
+				B3221010238337660050C274 /* NumberUtilsTest.swift */,
+				B3221012238339A40050C274 /* RepositoryPaginateTests.swift */,
 			);
 			path = "Github-ApplicationTests";
 			sourceTree = "<group>";
@@ -666,6 +675,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3221013238339A40050C274 /* RepositoryPaginateTests.swift in Sources */,
+				B322100F238335880050C274 /* TextModelTest.swift in Sources */,
+				B3221011238337660050C274 /* NumberUtilsTest.swift in Sources */,
 				B369CE192374AD6C00769209 /* Github_ApplicationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
