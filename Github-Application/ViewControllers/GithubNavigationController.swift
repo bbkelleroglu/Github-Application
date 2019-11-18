@@ -4,7 +4,6 @@ class GithubNavigationController: UINavigationController, UINavigationController
         super.viewDidLoad()
         delegate = self
     }
-
     func navigationController(_ navigationController: UINavigationController,
                               willShow viewController: UIViewController, animated: Bool) {
         viewController.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ",

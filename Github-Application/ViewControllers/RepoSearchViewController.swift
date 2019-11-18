@@ -85,7 +85,6 @@ extension RepoSearchViewController: UITableViewDelegate {
         self.performSegue(withIdentifier: R.segue.repoSearchViewController.repositoryDetail) { segue in
             segue.destination.repositoryData = repoDetail
         }
-
     }
 }
 extension RepoSearchViewController: UISearchResultsUpdating, UISearchBarDelegate {

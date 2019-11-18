@@ -15,10 +15,12 @@ class UserDetailViewController: UIViewController, RepositoryTableViewCellDelegat
     var details = [(UIImage, String, String)]()
     var userRepositories = [RepositoryModel]()
     var userRepositoriesService: RepositoryService!
+    var fullname: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let username = username else { return }
+
         userRepositoriesService.userRepositoryService(username: username).done {
             self.userRepositories += $0
             self.tableView.reloadData()
@@ -36,6 +38,7 @@ class UserDetailViewController: UIViewController, RepositoryTableViewCellDelegat
         }.catch { error in
             print(error)
         }
+        navigationItem.setTitle(title: "bbkelleroglu", subtitle: "Burak Kelleroglu")
         tableView.register(R.nib.repositoryCell)
     }
 }
