@@ -8,8 +8,13 @@ class RepoSearchViewController: SegueManagerViewController, RepositoryTableViewC
     var searchService: RepositoryService!
     private var pages = [Page<RepositoryModel, TextModel>]()
     private var repos: [RepositoryModel] {
-        pages.flatMap { $0.data }
+        if searchBar.text?.isEmpty != false {
+           return initialRepos.flatMap{ $0.data }
+        } else {
+            return pages.flatMap { $0.data }
+        }
     }
+    private var initialRepos = [Page<RepositoryModel, TextModel>]()
     private var numberOfItems: Int { repos.count }
 
     private lazy var searchController: UISearchController = {
@@ -26,6 +31,7 @@ class RepoSearchViewController: SegueManagerViewController, RepositoryTableViewC
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchBar()
+        initialQuery()
         tableView.register(R.nib.repositoryCell)
     }
 
@@ -36,15 +42,18 @@ class RepoSearchViewController: SegueManagerViewController, RepositoryTableViewC
         searchBar.autocorrectionType = .no
         searchBar.backgroundImage = UIImage()
         searchBar.placeholder = "Repository Search"
-        searchBar.tintColor = .white
         self.navigationItem.searchController = searchController
     }
 
     private func loadNextPage() {
-        let nextPage = pages.last!.nextPageRequest
+        let nextPage = self.searchBar.text?.isEmpty == true ? initialRepos.last!.nextPageRequest : pages.last!.nextPageRequest
         currentPromise?.cancel()
         currentPromise = searchService.searchRepo(body: nextPage).done {
-            self.pages.append($0.page)
+            if self.searchBar.text?.isEmpty == true {
+                self.initialRepos.append($0.page)
+            } else {
+                self.pages.append($0.page)
+            }
             let range = (self.repos.count - $0.page.data.count)..<self.repos.count
             let indexPaths = range.map { IndexPath(item: $0, section: 0) }
             self.tableView.insertRows(at: indexPaths, with: .automatic)
@@ -54,6 +63,16 @@ class RepoSearchViewController: SegueManagerViewController, RepositoryTableViewC
         currentPromise?.catch { error in
             print(error)
         }
+    }
+
+    private func initialQuery() {
+        let body = TextModel(q: "vngrs", page: 1)
+        currentPromise?.cancel()
+        currentPromise = searchService.searchRepo(body: body).done {
+            self.initialRepos = [$0.page]
+            self.totalCountLabel.text = "\(NumberUtils.formatWithUnits($0.totalCount)) popular vngrs topics"
+            self.tableView.reloadData()
+        }.asCancellable()
     }
 
     private func loadNewQuery(text: String) {
@@ -116,7 +135,9 @@ extension RepoSearchViewController: UITableViewDelegate {
 
 extension RepoSearchViewController: UISearchResultsUpdating, UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
-        guard let text = searchController.searchBar.text else { return }
+        guard let text = searchController.searchBar.text, !text.isEmpty else {
+            tableView.reloadData()
+            return }
         loadNewQuery(text: text)
     }
 }

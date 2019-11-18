@@ -38,7 +38,7 @@ class RepositoryCell: UITableViewCell {
         repoName.text = repository.fullName
         repoDescription.text = repository.description
         language.text = repository.language
-        starCount.text = String(repository.stargazersCount)
+        starCount.text = String(NumberUtils.formatWithUnits(repository.stargazersCount))
 
         if let avatarImageUrl = repository.owner.avatarUrl {
             avatarImage.image = nil
