@@ -45,6 +45,7 @@
                     <connections>
                         <outlet property="tableView" destination="BwC-hI-XCV" id="0CD-mo-wsv"/>
                         <segue destination="3kC-3z-WY0" kind="show" identifier="userDetail" id="1xD-Fb-yn1"/>
+                        <segue destination="cKJ-be-nRc" kind="show" identifier="repositoryDetail" id="7CG-4p-3SY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -169,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k9a-ad-fKi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1721.7391304347827" y="876.5625"/>
+            <point key="canvasLocation" x="1455" y="877"/>
         </scene>
         <!--Repo Detail View Controller-->
         <scene sceneID="AzZ-Sh-bNx">
@@ -178,13 +179,31 @@
                     <view key="view" contentMode="scaleToFill" id="NHO-sS-QqP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FXZ-a5-qqo" customClass="DetailHeaderComponent" customModule="Github_Application" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="140" width="414" height="230"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="hRc-Po-MEd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FXZ-a5-qqo" firstAttribute="leading" secondItem="UJX-IC-RD1" secondAttribute="leading" id="Lno-TL-IUb"/>
+                            <constraint firstItem="FXZ-a5-qqo" firstAttribute="top" secondItem="UJX-IC-RD1" secondAttribute="top" id="fWm-BO-J8z"/>
+                            <constraint firstItem="FXZ-a5-qqo" firstAttribute="trailing" secondItem="UJX-IC-RD1" secondAttribute="trailing" id="pyA-HB-nju"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UJX-IC-RD1"/>
                     </view>
+                    <navigationItem key="navigationItem" id="m4P-4D-5AM"/>
+                    <connections>
+                        <outlet property="detailHeaderView" destination="FXZ-a5-qqo" id="Q4I-hY-9R6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vnv-2N-i2t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2567" y="875"/>
+            <point key="canvasLocation" x="2498.5507246376815" y="876.5625"/>
         </scene>
     </scenes>
 </document>

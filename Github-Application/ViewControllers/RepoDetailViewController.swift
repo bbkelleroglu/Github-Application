@@ -1,7 +1,9 @@
 import UIKit
+import SegueManager
+class RepoDetailViewController: SegueManagerViewController {
 
-class RepoDetailViewController: UIViewController {
-
+    @IBOutlet weak var detailHeaderView: DetailHeaderComponent!
+    var repositoryData: RepositoryModel?
     override func viewDidLoad() {
         super.viewDidLoad()
 

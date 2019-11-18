@@ -80,6 +80,13 @@ extension RepoSearchViewController: UITableViewDelegate {
             load(text: searchBar.text ?? "")
         }
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let repoDetail = repos[indexPath.row]
+        self.performSegue(withIdentifier: R.segue.repoSearchViewController.repositoryDetail) { segue in
+            segue.destination.repositoryData = repoDetail
+        }
+
+    }
 }
 extension RepoSearchViewController: UISearchResultsUpdating, UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
