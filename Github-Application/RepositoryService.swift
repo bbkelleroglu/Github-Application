@@ -20,7 +20,8 @@ class GithubSearchService: RepositoryService {
         }
     }
 
-    func userRepositoryService(username: String, body: RepositoryPaginate) -> Promise<Page<RepositoryModel, RepositoryPaginate>> {
+    func userRepositoryService(username: String, body: RepositoryPaginate) ->
+        Promise<Page<RepositoryModel, RepositoryPaginate>> {
         let request = RestingRequest(endpoint: Endpoints.Users.userRepositoryDetail,
                                      body: body,
                                      pathVariables: ["username": username])
@@ -40,7 +41,8 @@ class MockGithubSearchService: RepositoryService {
         }
     }
 
-    func userRepositoryService(username: String, body: RepositoryPaginate) -> Promise<Page<RepositoryModel, RepositoryPaginate>> {
+    func userRepositoryService(username: String, body: RepositoryPaginate) ->
+        Promise<Page<RepositoryModel, RepositoryPaginate>> {
         return Promise.value(fixtures.repository).toPage(with: body)
     }
 }

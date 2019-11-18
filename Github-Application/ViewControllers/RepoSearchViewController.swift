@@ -48,7 +48,7 @@ class RepoSearchViewController: SegueManagerViewController, RepositoryTableViewC
             let range = (self.repos.count - $0.page.data.count)..<self.repos.count
             let indexPaths = range.map { IndexPath(item: $0, section: 0) }
             self.tableView.insertRows(at: indexPaths, with: .automatic)
-            self.totalCountLabel.text = "\($0.totalCount) results"
+            self.totalCountLabel.text = "\(NumberUtils.formatWithUnits($0.totalCount)) results"
         }.asCancellable()
 
         currentPromise?.catch { error in
@@ -62,7 +62,7 @@ class RepoSearchViewController: SegueManagerViewController, RepositoryTableViewC
         currentPromise?.cancel()
         currentPromise = searchService.searchRepo(body: body).done {
             self.pages = [$0.page]
-            self.totalCountLabel.text = "\($0.totalCount) results"
+            self.totalCountLabel.text = "\(NumberUtils.formatWithUnits($0.totalCount)) results"
             self.tableView.reloadData()
         }.asCancellable()
 
@@ -82,7 +82,6 @@ class RepoSearchViewController: SegueManagerViewController, RepositoryTableViewC
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         touch.view?.isDescendant(of: tableView) == true
     }
-
 }
 extension RepoSearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

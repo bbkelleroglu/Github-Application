@@ -57,7 +57,8 @@ class UserDetailViewController: UIViewController, RepositoryTableViewCellDelegat
 
 extension UserDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.section == 1 && indexPath.row == userRepositories.count - 1 && currentPromise?.isResolved != false {
+        if indexPath.section == 1 && indexPath.row == userRepositories.count - 1 &&
+            currentPromise?.isResolved != false {
             loadRepostories(page: pages.last!.nextPageRequest)
         }
     }
