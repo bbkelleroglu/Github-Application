@@ -12,19 +12,19 @@ extension SwinjectStoryboard {
         container.autoregister(Config.self, initializer: Config.init)
         registerControllers(container: container)
         #if MOCK
-        container.autoregister(SearchService.self, initializer: MockGithubSearchService.init)
+        container.autoregister(RepositoryService.self, initializer: MockGithubSearchService.init)
         #else
         registerNetworkServices(into: container)
         #endif
     }
     static func registerNetworkServices(into container: Container) {
         container.autoregister(NetworkService.self, initializer: NetworkService.init)
-        container.autoregister(SearchService.self, initializer: GithubSearchService.init).inObjectScope(.container)
+        container.autoregister(RepositoryService.self, initializer: GithubSearchService.init).inObjectScope(.container)
         container.autoregister(UserService.self, initializer: GithubUserService.init).inObjectScope(.container)
     }
     static func registerMockServices(into container: Container) {
         container.autoregister(UserService.self, initializer: MockGithubUserService.init).inObjectScope(.container)
-        container.autoregister(SearchService.self, initializer: MockGithubSearchService.init).inObjectScope(.container)
+        container.autoregister(RepositoryService.self, initializer: MockGithubSearchService.init).inObjectScope(.container)
     }
     static func registerControllers(container: Container) {
         container.storyboardInitCompleted(RepoSearchViewController.self) { r, c in
@@ -32,6 +32,7 @@ extension SwinjectStoryboard {
         }
         container.storyboardInitCompleted(UserDetailViewController.self) { r, c in
             c.userService = r~>
+            c.userRepositoriesService = r~>
         }
     }
 }

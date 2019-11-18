@@ -16,7 +16,7 @@ class Config {
         queryParameterEncoder.keyEncodingStrategy = .convertToSnakeCase
 
         let dateTimeFormatter = ISO8601DateFormatter()
-        dateTimeFormatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        dateTimeFormatter.formatOptions = [.withInternetDateTime]
 
         jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
         jsonDecoder.dateDecodingStrategy = .custom { decoder in

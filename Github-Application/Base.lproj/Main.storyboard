@@ -164,6 +164,7 @@
                     <navigationItem key="navigationItem" id="OrX-1T-9Ql"/>
                     <connections>
                         <outlet property="detailHeaderComponent" destination="9pJ-dE-rsH" id="gFf-W9-WS9"/>
+                        <outlet property="tableView" destination="cMh-oO-Aq0" id="WGJ-R1-opy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k9a-ad-fKi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

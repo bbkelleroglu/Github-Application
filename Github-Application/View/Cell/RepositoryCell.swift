@@ -4,6 +4,7 @@ import UIKit
 protocol RepositoryTableViewCellDelegate: UIGestureRecognizerDelegate {
     func repositoryTableViewCellDidSelectAvatar(repositoryCell: RepositoryCell)
 }
+
 class RepositoryCell: UITableViewCell {
     @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var repoName: UILabel!

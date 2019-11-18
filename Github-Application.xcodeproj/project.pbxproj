@@ -38,7 +38,7 @@
 		B369CE242374AD6C00769209 /* Github_ApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B369CE232374AD6C00769209 /* Github_ApplicationUITests.swift */; };
 		B369CE362374BF7C00769209 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B369CE352374BF7C00769209 /* Config.swift */; };
 		B369CE3A2376049500769209 /* SwinjectStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B369CE392376049500769209 /* SwinjectStoryboard.swift */; };
-		B369CE3D2377333B00769209 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B369CE3C2377333B00769209 /* SearchService.swift */; };
+		B369CE3D2377333B00769209 /* RepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B369CE3C2377333B00769209 /* RepositoryService.swift */; };
 		B369CE3F2377334500769209 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B369CE3E2377334500769209 /* UserService.swift */; };
 		C2390F715F2E5F853555D47D /* Pods_Github_Application_Github_ApplicationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0B12AE49BF9DFC2BF662B86 /* Pods_Github_Application_Github_ApplicationUITests.framework */; };
 /* End PBXBuildFile section */
@@ -104,7 +104,7 @@
 		B369CE252374AD6C00769209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B369CE352374BF7C00769209 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		B369CE392376049500769209 /* SwinjectStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectStoryboard.swift; sourceTree = "<group>"; };
-		B369CE3C2377333B00769209 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		B369CE3C2377333B00769209 /* RepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryService.swift; sourceTree = "<group>"; };
 		B369CE3E2377334500769209 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		CAA8A2285BA06324C77575F7 /* Pods-Github-Application.mock.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github-Application.mock.xcconfig"; path = "Target Support Files/Pods-Github-Application/Pods-Github-Application.mock.xcconfig"; sourceTree = "<group>"; };
 		E0B12AE49BF9DFC2BF662B86 /* Pods_Github_Application_Github_ApplicationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Github_Application_Github_ApplicationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -314,7 +314,7 @@
 		B369CE3B2377332C00769209 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				B369CE3C2377333B00769209 /* SearchService.swift */,
+				B369CE3C2377333B00769209 /* RepositoryService.swift */,
 				B369CE3E2377334500769209 /* UserService.swift */,
 				B3220FC4237F16D80050C274 /* NetworkService.swift */,
 			);
@@ -626,7 +626,7 @@
 				B369CE362374BF7C00769209 /* Config.swift in Sources */,
 				B369CE022374AD6B00769209 /* AppDelegate.swift in Sources */,
 				B3220FEB2381E3CC0050C274 /* ProfileDetailCell.swift in Sources */,
-				B369CE3D2377333B00769209 /* SearchService.swift in Sources */,
+				B369CE3D2377333B00769209 /* RepositoryService.swift in Sources */,
 				B369CE3A2376049500769209 /* SwinjectStoryboard.swift in Sources */,
 				B3220FD72381687B0050C274 /* DetailHeaderComponent.swift in Sources */,
 				B3220FE92381D4E50050C274 /* RepositoryCell.swift in Sources */,

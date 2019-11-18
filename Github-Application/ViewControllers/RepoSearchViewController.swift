@@ -15,7 +15,7 @@ class RepoSearchViewController: SegueManagerViewController, RepositoryTableViewC
     }
 
     @IBOutlet weak var tableView: UITableView!
-    var searchService: SearchService!
+    var searchService: RepositoryService!
     private var repos = [RepositoryModel]()
     var nextPageUrl: String? = ""
     let numberOfPagination = 10
