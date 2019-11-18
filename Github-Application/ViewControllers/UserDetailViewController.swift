@@ -30,9 +30,9 @@ class UserDetailViewController: UIViewController, RepositoryTableViewCellDelegat
         userService.userDetail(username: username).done {
             self.detailHeaderComponent.configureUserDetail(for: $0)
             self.details = [
-                (#imageLiteral(resourceName: "icons8-calendar-50"), "Created at", "\($0.createdAt)"),
-                (#imageLiteral(resourceName: "icons8-time-50"), "Updated at", "\($0.updatedAt)"),
-                (#imageLiteral(resourceName: "icons8-marker-50"), "Location", "\($0.location ?? "-")")
+                (R.image.icons8Calendar50()!, "Created at", Date.getFormattedDate(date: $0.createdAt)),
+                (R.image.icons8Time50()!, "Updated at", Date.getFormattedDate(date: $0.updatedAt)),
+                (R.image.icons8Marker50()!, "Location", $0.location ?? "-")
             ]
             self.tableView.reloadData()
         }.catch { error in

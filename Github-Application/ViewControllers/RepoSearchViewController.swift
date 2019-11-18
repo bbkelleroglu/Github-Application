@@ -86,6 +86,7 @@ extension RepoSearchViewController: UITableViewDelegate {
             segue.destination.repositoryData = repoDetail
         }
     }
+    
 }
 extension RepoSearchViewController: UISearchResultsUpdating, UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
