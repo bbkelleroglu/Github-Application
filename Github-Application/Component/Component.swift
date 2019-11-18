@@ -1,8 +1,5 @@
 import UIKit
 
-class ComponentView: UIView {
-}
-
 class Component: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -14,32 +14,22 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="S8E-id-fxB" userLabel="Card Stack">
-                    <rect key="frame" x="0.0" y="174" width="414" height="50"/>
+                    <rect key="frame" x="0.0" y="116" width="414" height="108"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIR-YO-NeN" customClass="HeaderCardComponent" customModule="Github_Application" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="122.5" height="50"/>
+                            <rect key="frame" x="0.0" y="0.0" width="122.5" height="108"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="WWT-ed-m7R"/>
-                            </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKz-Ho-sTM" customClass="HeaderCardComponent" customModule="Github_Application" customModuleProvider="target">
-                            <rect key="frame" x="145.5" y="0.0" width="123" height="50"/>
+                            <rect key="frame" x="145.5" y="0.0" width="123" height="108"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="amz-eM-1zG"/>
-                            </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZX-Jc-35h" customClass="HeaderCardComponent" customModule="Github_Application" customModuleProvider="target">
-                            <rect key="frame" x="291.5" y="0.0" width="122.5" height="50"/>
+                            <rect key="frame" x="291.5" y="0.0" width="122.5" height="108"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="2Oj-ns-bKS"/>
-                            </constraints>
                         </view>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="bIR-YO-NeN" firstAttribute="leading" secondItem="S8E-id-fxB" secondAttribute="leading" id="YSp-Mi-EwO"/>
                         <constraint firstAttribute="bottom" secondItem="bIR-YO-NeN" secondAttribute="bottom" id="nsj-55-d6Z"/>
                     </constraints>
                 </stackView>
@@ -63,12 +53,10 @@
                 <constraint firstItem="9LU-bf-m6A" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="FW5-RQ-vbv"/>
                 <constraint firstItem="9LU-bf-m6A" firstAttribute="leading" secondItem="XdO-jc-uc4" secondAttribute="trailing" constant="8" id="HDX-mG-TkX"/>
                 <constraint firstItem="S8E-id-fxB" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="IeJ-cT-XH9"/>
-                <constraint firstItem="S8E-id-fxB" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="JDM-Gk-Xhk"/>
                 <constraint firstItem="S8E-id-fxB" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="JcQ-f5-EDO"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9LU-bf-m6A" secondAttribute="trailing" constant="8" id="LVq-4E-KVL"/>
                 <constraint firstItem="S8E-id-fxB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="RB5-bJ-Fp3"/>
-                <constraint firstItem="S8E-id-fxB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="brM-pq-Olh"/>
-                <constraint firstItem="S8E-id-fxB" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="gPh-Ae-6y9"/>
+                <constraint firstItem="S8E-id-fxB" firstAttribute="top" secondItem="XdO-jc-uc4" secondAttribute="bottom" constant="8" id="msW-Rn-V94"/>
                 <constraint firstItem="XdO-jc-uc4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="sx3-dw-aaD"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

@@ -3,19 +3,8 @@ import SegueManager
 import UIKit
 
 class RepoSearchViewController: SegueManagerViewController, RepositoryTableViewCellDelegate {
-    func repositoryTableViewCellDidSelectAvatar(repositoryCell: RepositoryCell) {
-        guard let indexPath = tableView.indexPath(for: repositoryCell) else { return }
-        let username = repos[indexPath.row].owner.login
-        performSegue(withIdentifier: R.segue.repoSearchViewController.userDetail) { segue in
-            segue.destination.username = username
-        }
-    }
-
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-        touch.view?.isDescendant(of: tableView) == true
-    }
-
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var totalCountLabel: UILabel!
     var searchService: RepositoryService!
     private var pages = [Page<RepositoryModel, TextModel>]()
     private var repos: [RepositoryModel] {
@@ -26,10 +15,11 @@ class RepoSearchViewController: SegueManagerViewController, RepositoryTableViewC
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = true
         searchController.searchResultsUpdater = self
         return searchController
     }()
+
     private var searchBar: UISearchBar { searchController.searchBar }
     private weak var currentPromise: CancellablePromise<Void>?
 
@@ -54,10 +44,11 @@ class RepoSearchViewController: SegueManagerViewController, RepositoryTableViewC
         let nextPage = pages.last!.nextPageRequest
         currentPromise?.cancel()
         currentPromise = searchService.searchRepo(body: nextPage).done {
-            self.pages.append($0)
-            let range = (self.repos.count - $0.data.count)..<self.repos.count
+            self.pages.append($0.page)
+            let range = (self.repos.count - $0.page.data.count)..<self.repos.count
             let indexPaths = range.map { IndexPath(item: $0, section: 0) }
             self.tableView.insertRows(at: indexPaths, with: .automatic)
+            self.totalCountLabel.text = "\($0.totalCount) results"
         }.asCancellable()
 
         currentPromise?.catch { error in
@@ -70,7 +61,8 @@ class RepoSearchViewController: SegueManagerViewController, RepositoryTableViewC
 
         currentPromise?.cancel()
         currentPromise = searchService.searchRepo(body: body).done {
-            self.pages = [$0]
+            self.pages = [$0.page]
+            self.totalCountLabel.text = "\($0.totalCount) results"
             self.tableView.reloadData()
         }.asCancellable()
 
@@ -78,6 +70,19 @@ class RepoSearchViewController: SegueManagerViewController, RepositoryTableViewC
             print(error)
         }
     }
+
+    func repositoryTableViewCellDidSelectAvatar(repositoryCell: RepositoryCell) {
+        guard let indexPath = tableView.indexPath(for: repositoryCell) else { return }
+        let username = repos[indexPath.row].owner.login
+        performSegue(withIdentifier: R.segue.repoSearchViewController.userDetail) { segue in
+            segue.destination.username = username
+        }
+    }
+
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        touch.view?.isDescendant(of: tableView) == true
+    }
+
 }
 extension RepoSearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

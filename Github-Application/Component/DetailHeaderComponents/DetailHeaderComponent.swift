@@ -28,7 +28,7 @@ class DetailHeaderComponent: Component {
             view.avatarImage.af_cancelImageRequest()
             view.avatarImage.image = .checkmark
         }
-        view.descriptionLabel.text = user.bio
+        view.descriptionLabel.text = user.bio ?? "Apparently, this user prefers to keep an air of mystery about them."
         view.firstHeaderCardView.countText = String(user.followers)
         view.firstHeaderCardView.nameText = "Followers"
         view.secondHeaderCardView.countText = String(user.following)
@@ -36,6 +36,7 @@ class DetailHeaderComponent: Component {
         view.thirdHeaderCardView.countText = String(user.publicRepos)
         view.thirdHeaderCardView.nameText = "Repository"
     }
+
     func configureRepoDetail(for repo: RepositoryModel) {
         if let image = repo.owner.avatarUrl {
             view.avatarImage.af_setImage(withURL: image)
@@ -43,7 +44,7 @@ class DetailHeaderComponent: Component {
             view.avatarImage.af_cancelImageRequest()
             view.avatarImage.image = .checkmark
         }
-        view.descriptionLabel.text = repo.description
+        view.descriptionLabel.text = repo.description ?? "Apparently, this user prefers to keep an air of mystery about them."
         view.firstHeaderCardView.countText = String(repo.stargazersCount)
         view.firstHeaderCardView.nameText = "Stars"
         view.secondHeaderCardView.countText = String(repo.watchersCount)

@@ -44,6 +44,7 @@
                     <navigationItem key="navigationItem" title="Repository Search" id="wsK-VH-fWV"/>
                     <connections>
                         <outlet property="tableView" destination="BwC-hI-XCV" id="0CD-mo-wsv"/>
+                        <outlet property="totalCountLabel" destination="jVn-4Q-QHb" id="r0j-IW-JHC"/>
                         <segue destination="3kC-3z-WY0" kind="show" identifier="userDetail" id="1xD-Fb-yn1"/>
                         <segue destination="cKJ-be-nRc" kind="show" identifier="repositoryDetail" id="7CG-4p-3SY"/>
                     </connections>
@@ -79,14 +80,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9pJ-dE-rsH" customClass="DetailHeaderComponent" customModule="Github_Application" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="140" width="414" height="230"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="180"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="230" id="mfT-sm-iIB"/>
+                                    <constraint firstAttribute="height" constant="180" id="w8h-xE-O44"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cMh-oO-Aq0">
-                                <rect key="frame" x="0.0" y="370" width="414" height="492"/>
+                                <rect key="frame" x="0.0" y="268" width="414" height="594"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="profileDetailCell" id="TUn-zV-FSk" customClass="ProfileDetailCell" customModule="Github_Application" customModuleProvider="target">
@@ -162,7 +163,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cuT-UV-5D6"/>
                     </view>
-                    <navigationItem key="navigationItem" id="OrX-1T-9Ql"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="OrX-1T-9Ql"/>
                     <connections>
                         <outlet property="detailHeaderComponent" destination="9pJ-dE-rsH" id="gFf-W9-WS9"/>
                         <outlet property="tableView" destination="cMh-oO-Aq0" id="WGJ-R1-opy"/>
@@ -181,10 +182,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FXZ-a5-qqo" customClass="DetailHeaderComponent" customModule="Github_Application" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="140" width="414" height="230"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="180"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="230" id="hRc-Po-MEd"/>
+                                    <constraint firstAttribute="height" constant="180" id="bpU-Ld-kM6"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -196,7 +197,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UJX-IC-RD1"/>
                     </view>
-                    <navigationItem key="navigationItem" id="m4P-4D-5AM"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="m4P-4D-5AM"/>
                     <connections>
                         <outlet property="detailHeaderView" destination="FXZ-a5-qqo" id="Q4I-hY-9R6"/>
                     </connections>
